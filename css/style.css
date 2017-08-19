@@ -109,7 +109,7 @@ body >header {
   width: 100%;
   -webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
-  background: #c0ff3e;
+  background: #b3b3b3;
   color: #fff;
   padding: 1em 0 0.8em;
 }
@@ -264,7 +264,7 @@ header nav ul li a {
   }
 }
 header nav ul li a:hover {
-  background: #a4fa00;
+  background: #868686;
   color: #e9cd4c;
 }
 .shownav {
@@ -854,7 +854,7 @@ a
 }
 #page-navs a:hover {
   background: color-grey;
-  color: #c0ff3e;
+  color: #b3b3b3;
 }
 #page-navs .prev {
   float: left;
