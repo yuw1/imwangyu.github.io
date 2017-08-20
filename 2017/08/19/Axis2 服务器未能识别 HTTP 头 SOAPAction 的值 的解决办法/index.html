@@ -1,106 +1,106 @@
 
-
-<!DOCTYPE HTML>
-<html>
+ <!DOCTYPE HTML>
+<html >
 <head>
-  <meta charset="utf-8">
-  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=44218032" charset="UTF-8"></script>
-  <script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?7192fa361f5cabb11d8a22de41c1ba8f";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
+  <meta charset="UTF-8">
   
-  <title>Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法 | Become A Better Coder</title>
-  <meta name="author" content="Wang Yu">
-  
-  <meta name="description" content="公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：12345678910111213141516171819202122232425262728293031323334353637383940import org.apache.axiom.om.OMAbs">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法 | Become A Better Coder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Wang Yu">
+    
 
-  <meta property="og:title" content="Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法"/>
-  <meta property="og:site_name" content="Become A Better Coder"/>
+    
+    <meta name="description" content="公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：12345678910111213141516171819202122232425262728293031323334353637383940import org.apache.axiom.om.OMAbstractFactory;import org.apache.axiom.om.OMElement;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法">
+<meta property="og:url" content="http:/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/index.html">
+<meta property="og:site_name" content="Become A Better Coder">
+<meta property="og:description" content="公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：12345678910111213141516171819202122232425262728293031323334353637383940import org.apache.axiom.om.OMAbstractFactory;import org.apache.axiom.om.OMElement;">
+<meta property="og:updated_time" content="2017-08-19T16:41:13.412Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法">
+<meta name="twitter:description" content="公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：12345678910111213141516171819202122232425262728293031323334353637383940import org.apache.axiom.om.OMAbstractFactory;import org.apache.axiom.om.OMElement;">
 
-  
-    <meta property="og:image" content=""/>
-  
-
-  <link href="/imgs/favicon.ico" rel="icon" type="image/x-ico">
-  <link rel="alternate" href="/atom.xml" title="Become A Better Coder" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+    
+    <link rel="alternative" href="/atom.xml" title="Become A Better Coder" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-
-<body>
-  <header><div>
+  <body>
+    <header>
+      
+<div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/imgs/logo.png" alt="Become A Better Coder" title="Become A Better Coder"/></a>
+				<a href="/"><img src="/img/logo.png" alt="Become A Better Coder" title="Become A Better Coder"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name">Become A Better Coder</h1>
+				<h1 class="site-name"><a href="/" title="Become A Better Coder">Become A Better Coder</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
 			<nav class="animated">
 				<ul>
-					
+					<ul>
+					 
 						<li><a href="/">Home</a></li>
 					
 						<li><a href="/archives">Archives</a></li>
 					
 						<li><a href="/about">About</a></li>
 					
-					<li> <a href="/atom.xml">RSS</a> </li>
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:http:">
+					</form>
+					
+					</li>
 				</ul>
 			</nav>			
 </div>
-</header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header class="article-info clearfix">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
-	Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法
+    
+      <a href="/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" title="Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法" itemprop="url">Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法</a>
   </h1>
   <p class="article-author">By
-    
-      <a href="http:" title="Wang Yu">Wang Yu</a>
-    </p>
+       
+		<a href="/about" title="Wang Yu" target="_blank" itemprop="author">Wang Yu</a>
+		
   <p class="article-time">
-    <time datetime="2017-08-19T06:24:46.791Z" itemprop="datePublished">2017-08-19</time>
-    更新日期:<time datetime="2017-08-19T16:41:13.412Z" itemprop="dateModified">2017-08-20</time>
+    <time datetime="2017-08-19T06:24:46.791Z" itemprop="datePublished"> Published 2017-08-19</time>
     
   </p>
 </header>
-    <div class="entry">
+	<div class="article-content">
 		
-			<div id="toc" class="toc-article">
-				<strong class="toc-title">文章目录</strong>
-				
-			</div>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
 		
-        <p>公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMAbstractFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMElement;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMNamespace;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.AxisFault;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.addressing.EndpointReference;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.Options;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.ServiceClient;</span></div><div class="line"></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> java.rmi.RemoteException;</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Axis2Test</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws RemoteException &#123;</div><div class="line">        test();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> test() throws AxisFault &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String url = <span class="string">"目标URL"</span>;</div><div class="line">            Options options = <span class="keyword">new</span> Options();</div><div class="line">            EndpointReference targetEPR = <span class="keyword">new</span> EndpointReference(url);</div><div class="line">            options.setTo(targetEPR);</div><div class="line">            ServiceClient sender = <span class="keyword">new</span> ServiceClient();</div><div class="line">            sender.setOptions(options);</div><div class="line">            OMFactory fac = OMAbstractFactory.getOMFactory();</div><div class="line">            String tns = <span class="string">"目标的TargetNameSpace"</span>;</div><div class="line">            OMNamespace omNs = fac.createOMNamespace(tns, <span class="string">""</span>);</div><div class="line">            OMElement method = fac.createOMElement(<span class="string">"调用的方法名"</span>, omNs);</div><div class="line">            OMElement symbol = fac.createOMElement(<span class="string">"参数名"</span>, omNs);</div><div class="line">            symbol.addChild(fac.createOMText(symbol, <span class="string">"参数值"</span>));</div><div class="line">            method.addChild(symbol);</div><div class="line">            method.build();</div><div class="line">            OMElement result = sender.sendReceive(method);</div><div class="line">            System.out.println(result);</div><div class="line">        &#125; <span class="keyword">catch</span> (AxisFault axisFault) &#123;</div><div class="line">            axisFault.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+			
+		
+		</div>
+		
+		<p>公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMAbstractFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMElement;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMNamespace;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.AxisFault;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.addressing.EndpointReference;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.Options;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.ServiceClient;</span></div><div class="line"></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> java.rmi.RemoteException;</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Axis2Test</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws RemoteException &#123;</div><div class="line">        test();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> test() throws AxisFault &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String url = <span class="string">"目标URL"</span>;</div><div class="line">            Options options = <span class="keyword">new</span> Options();</div><div class="line">            EndpointReference targetEPR = <span class="keyword">new</span> EndpointReference(url);</div><div class="line">            options.setTo(targetEPR);</div><div class="line">            ServiceClient sender = <span class="keyword">new</span> ServiceClient();</div><div class="line">            sender.setOptions(options);</div><div class="line">            OMFactory fac = OMAbstractFactory.getOMFactory();</div><div class="line">            String tns = <span class="string">"目标的TargetNameSpace"</span>;</div><div class="line">            OMNamespace omNs = fac.createOMNamespace(tns, <span class="string">""</span>);</div><div class="line">            OMElement method = fac.createOMElement(<span class="string">"调用的方法名"</span>, omNs);</div><div class="line">            OMElement symbol = fac.createOMElement(<span class="string">"参数名"</span>, omNs);</div><div class="line">            symbol.addChild(fac.createOMText(symbol, <span class="string">"参数值"</span>));</div><div class="line">            method.addChild(symbol);</div><div class="line">            method.build();</div><div class="line">            OMElement result = sender.sendReceive(method);</div><div class="line">            System.out.println(result);</div><div class="line">        &#125; <span class="keyword">catch</span> (AxisFault axisFault) &#123;</div><div class="line">            axisFault.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>在运行这段代码时出现了如下错误：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.AxisFault</span>: System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapException</span>: 服务器未能识别 HTTP 头 SOAPAction 的值: 。</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.Soap11ServerProtocolHelper</span><span class="selector-class">.RouteRequest</span>()</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapServerProtocol</span><span class="selector-class">.RouteRequest</span>(SoapServerMessage message)</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapServerProtocol</span><span class="selector-class">.Initialize</span>()</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.ServerProtocol</span><span class="selector-class">.SetContext</span>(Type type, HttpContext context, HttpRequest request, HttpResponse response)</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.ServerProtocolFactory</span><span class="selector-class">.Create</span>(Type type, HttpContext context, HttpRequest request, HttpResponse response, Boolean&amp; abortProcessing)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.util</span><span class="selector-class">.Utils</span><span class="selector-class">.getInboundFaultFromMessageContext</span>(Utils<span class="selector-class">.java</span>:<span class="number">508</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.handleResponse</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">368</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.send</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">414</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.executeImpl</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">225</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.OperationClient</span><span class="selector-class">.execute</span>(OperationClient<span class="selector-class">.java</span>:<span class="number">150</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.ServiceClient</span><span class="selector-class">.sendReceive</span>(ServiceClient<span class="selector-class">.java</span>:<span class="number">533</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.ServiceClient</span><span class="selector-class">.sendReceive</span>(ServiceClient<span class="selector-class">.java</span>:<span class="number">509</span>)</div><div class="line">	at Axis2Test.test(Axis2Test<span class="selector-class">.java</span>:<span class="number">34</span>)</div><div class="line">	at Axis2Test.main(Axis2Test<span class="selector-class">.java</span>:<span class="number">15</span>)</div></pre></td></tr></table></figure>
 <p>经过查找之后发现JAX-WS规范不需要SoapAction，但是.NET需要，所以产生了这个错误。<br>在上网查找了之后发现可以在option对象下添加一个属性：</p>
@@ -108,109 +108,102 @@
 <p>添加后代码为：</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMAbstractFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMElement;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMNamespace;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.AxisFault;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.addressing.EndpointReference;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.Options;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.ServiceClient;</span></div><div class="line"></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> java.rmi.RemoteException;</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Axis2Test</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws RemoteException &#123;</div><div class="line">        test();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> test() throws AxisFault &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String url = <span class="string">"目标URL"</span>;</div><div class="line">            Options options = <span class="keyword">new</span> Options();</div><div class="line">            EndpointReference targetEPR = <span class="keyword">new</span> EndpointReference(url);</div><div class="line">            options.setTo(targetEPR);</div><div class="line">            options.setAction(<span class="string">"目标的TargetNameSpace"</span>+<span class="string">"调用的方法名"</span>);<span class="comment">//需要加上这条语句</span></div><div class="line">            ServiceClient sender = <span class="keyword">new</span> ServiceClient();</div><div class="line">            sender.setOptions(options);</div><div class="line">            OMFactory fac = OMAbstractFactory.getOMFactory();</div><div class="line">            String tns = <span class="string">"目标的TargetNameSpace"</span>;</div><div class="line">            OMNamespace omNs = fac.createOMNamespace(tns, <span class="string">""</span>);</div><div class="line">            OMElement method = fac.createOMElement(<span class="string">"调用的方法名"</span>, omNs);</div><div class="line">            OMElement symbol = fac.createOMElement(<span class="string">"参数名"</span>, omNs);</div><div class="line">            symbol.addChild(fac.createOMText(symbol, <span class="string">"参数值"</span>));</div><div class="line">            method.addChild(symbol);</div><div class="line">            method.build();</div><div class="line">            OMElement result = sender.sendReceive(method);</div><div class="line">            System.out.println(result);</div><div class="line">        &#125; <span class="keyword">catch</span> (AxisFault axisFault) &#123;</div><div class="line">            axisFault.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>修改后信息返回成功</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
 
-    </div>
-    <footer>
-        
-        
-		<div class="bdsharebuttonbox">
-	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-	<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="bds_more" data-cmd="more"></a>
-	<a href="#" class="bds_count" data-cmd="count"></a>
+
 </div>
-<script>
-window._bd_share_config=
-{
-	"common":{
-		"bdSnsKey":{},
-		"bdText":"",
-		"bdMini":"2",
-		"bdMiniList":false,
-		"bdPic":"",
-		"bdStyle":"0",
-		"bdSize":"24"
-	},
-	"share":{},
-	"image":{
-		"viewList":["qzone","tsina","tqq","renren","weixin","fbook","twi"],
-		"viewText":"分享到：",
-		"viewSize":"24"
-	},
-	"selectShare":{
-		"bdContainerClass":null,
-		"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","fbook","twi"]
-	}
-};
-with(document)0[
-	(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)
-];
-</script>    
-        <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
 
- <nav id="pagination" >
-    
-    
-    <a href="/2017/08/19/通过反射来实现List转为JSON/" class="alignright next" title="通过反射来实现List转为JSON">通过反射来实现List转为JSON</a>
-    
-    <div class="clearfix"></div>
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http:/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" data-title="Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法 | Become A Better Coder" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2017/08/19/通过反射来实现List转为JSON/"  title="通过反射来实现List转为JSON">
+ <strong>下一篇：</strong><br/> 
+ <span>通过反射来实现List转为JSON
+</span>
+</a>
+</div>
+
 </nav>
 
-
-
 	
-	<section id="comment">
-		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" data-title="Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法" data-url="http:/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/"></div>
-		<!-- 多说评论框 end -->
-		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-		<script type="text/javascript">
-		var duoshuoQuery = {short_name:""};
-		(function() {
-			var ds = document.createElement('script');
-			ds.type = 'text/javascript';ds.async = true;
-			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-			ds.charset = 'UTF-8';
-			(document.getElementsByTagName('head')[0] 
-			 || document.getElementsByTagName('body')[0]).appendChild(ds);
-		})();
-		</script>
-		<!-- 多说公共JS代码 end -->
-	</section>
-	
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:http:">
-  </form>
-</div>
 
-  
 
-  
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
-  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5334658809&verifier=4f975959&dpc=1"></iframe>
-
-  <div class="widget tag">
-<h3 class="title">友情链接</h3>
-<ul class="entry">
-<li><a href="http://wangshifu.net.cn" title="股票分析平台" target="_blank">股票分析平台</a></li>
-</ul>
-</div>
-</aside>
-    <div class="clearfix"></div>
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
   </div>
-  <footer id="footer"><div id="footer" >
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -219,37 +212,168 @@ with(document)0[
 	
 	
 	<section class="info">
-		<p> I&#39;m the writer of this blog. <br/>
-			So you can click these buttons to contact me.</p>
+		<p> Hello ,I&#39;m Larry Page in Google. <br/>
+			This is my blog,believe it or not.</p>
 	</section>
 	 
-	<div class="social-font clearfix">
+	<div class="social-font" class="clearfix">
 		
-		<a href="http://weibo.com/5334658809" target="_blank" title="weibo"></a>
-		
-		
-		
-		<a href="https://github.com/imwangyu" target="_blank" title="github"></a>
-		
-		
-		<a href="https://www.facebook.com/imwangyu" target="_blank" title="facebook"></a>
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
 		
 		
 		
-		<a href="mailto:imwangyu@126.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		
+		
 		
 	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/huangjunhui/concise" target="_blank" title="Concise">Concise</a> © 2017 
+			
 		
-		<a href="http:/about" target="_blank" title="Wang Yu">Wang Yu</a>
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="Wang Yu">Wang Yu</a>
+		
 		
 		</p>
 </div>
 </footer>
-  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="/js/jquery-2.0.3.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
-<script src="/js/counter.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
 
 
 
@@ -257,46 +381,62 @@ with(document)0[
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
 </script>
 
-<div id="totop" style="position:fixed;bottom:100px;right:10px;cursor: pointer;">
-<a title="返回顶部"><img src="/imgs/scrollup.png"/></a>
-</div>
-<script src="/js/totop.js"></script>
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
 <!-- mathjax config similar to math.stackexchange -->
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
+<!-- MathJax End -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
+<!-- Tiny_search Begin -->
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</body>
+<!-- Tiny_search End -->
+
+  </body>
 </html>
-
-
