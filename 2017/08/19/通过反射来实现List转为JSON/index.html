@@ -48,7 +48,7 @@
 				<h1 class="site-name"><a href="/" title="Become A Better Coder">Become A Better Coder</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -64,7 +64,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:http:">
 					</form>
 					
@@ -87,18 +87,11 @@
 		<a href="/about" title="Wang Yu" target="_blank" itemprop="author">Wang Yu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-19T06:24:24.167Z" itemprop="datePublished"> Published 2017-08-19</time>
+    <time datetime="2017-08-19T06:24:24.167Z" itemprop="datePublished"> 发表于 2017-08-19</time>
     
   </p>
 </header>
 	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		
-			
-		
-		</div>
 		
 		<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">import net.sf.json.JSONArray;</div><div class="line">import net.sf.json.JSONObject;</div><div class="line"></div><div class="line">import java.lang.reflect.InvocationTargetException;</div><div class="line">import java.lang.reflect.Method;</div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Iterator;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> IteratorUtil&lt;T&gt; <span class="comment">&#123;</span></div><div class="line"><span class="comment">    </span></div><div class="line"><span class="comment">    /**</span></div><div class="line"><span class="comment">     * 将List格式转换为JSONArray格式</span></div><div class="line"><span class="comment">     * @param list</span></div><div class="line"><span class="comment">     * @param &lt;T&gt;</span></div><div class="line"><span class="comment">     * @return</span></div><div class="line"><span class="comment">     */</span></div><div class="line"><span class="comment">    public static &lt;T&gt; JSONArray convertToJson(List&lt;T&gt; list)&#123;</span></div><div class="line"><span class="comment">        if (list.size()==0)&#123;</span></div><div class="line"><span class="comment">            System.out.println("list 为空");</span></div><div class="line"><span class="comment">            return null;</span></div><div class="line"><span class="comment">        &#125;</span></div><div class="line">        <span class="keyword">Class</span> clazz = list.get(<span class="number">0</span>).getClass();</div><div class="line">        <span class="function"><span class="keyword">Method</span>[]<span class="title">methods</span> = <span class="title">clazz</span>.<span class="title">getMethods</span><span class="params">()</span>;</span></div><div class="line">        List&lt;<span class="function"><span class="keyword">Method</span>&gt;<span class="title">getMethods</span> = <span class="title">new</span> <span class="title">ArrayList</span>&lt;&gt;<span class="params">()</span>;</span></div><div class="line">        <span class="keyword">for</span> (<span class="function"><span class="keyword">Method</span> <span class="title">method</span>:</span>methods)<span class="comment">&#123;</span></div><div class="line"><span class="comment">            if (method.getName().matches("get[A-z]*")&amp;&amp;method.getDeclaringClass().equals(clazz))&#123;</span></div><div class="line"><span class="comment">                getMethods.add(method);</span></div><div class="line"><span class="comment">            &#125;</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">Iterator</span>&lt;T&gt; <span class="keyword">iterator</span> = list.iterator();</div><div class="line">        JSONArray jsonArray = null;</div><div class="line">        JSONObject jsonObject;</div><div class="line">        <span class="keyword">try</span> <span class="comment">&#123;</span></div><div class="line"><span class="comment">            jsonArray = new JSONArray();</span></div><div class="line"><span class="comment">            while (iterator.hasNext())&#123;</span></div><div class="line"><span class="comment">                jsonObject = new JSONObject();</span></div><div class="line"><span class="comment">                Object instance  = iterator.next();</span></div><div class="line"><span class="comment">                Iterator&lt;Method&gt; methodIterator = getMethods.iterator();</span></div><div class="line"><span class="comment">                while (methodIterator.hasNext())&#123;</span></div><div class="line"><span class="comment">                    Method method = methodIterator.next();</span></div><div class="line"><span class="comment">                    Object value = method.invoke(instance,new Object[]&#123;&#125;</span>);</div><div class="line">                    String field = <span class="function"><span class="keyword">method</span>.<span class="title">getName</span><span class="params">()</span>.<span class="title">substring</span><span class="params">(3,4)</span>.<span class="title">toLowerCase</span><span class="params">()</span>+<span class="title">method</span>.<span class="title">getName</span><span class="params">()</span>.<span class="title">substring</span><span class="params">(4)</span>;</span></div><div class="line">                    jsonObject.put(field,value);</div><div class="line">                &#125;</div><div class="line">                jsonArray.add(jsonObject);</div><div class="line">            &#125;</div><div class="line">        &#125; catch (IllegalAccessException e) <span class="comment">&#123;</span></div><div class="line"><span class="comment">            e.printStackTrace();</span></div><div class="line"><span class="comment">        &#125;</span> catch (InvocationTargetException e) <span class="comment">&#123;</span></div><div class="line"><span class="comment">            e.printStackTrace();</span></div><div class="line"><span class="comment">        &#125;</span><span class="keyword">finally</span> <span class="comment">&#123;</span></div><div class="line"><span class="comment">            return jsonArray;</span></div><div class="line"><span class="comment">        &#125;</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>  
 	</div>
@@ -140,22 +133,22 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github Card</p>
+<p class="asidetitle">Github 名片</p>
 <div class="github-card" data-github="imwangyu" data-theme="medium"></div>
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -167,7 +160,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -183,11 +176,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5334658809&verifier=4f975959&dpc=1"></iframe>
 </div>
 
@@ -422,7 +415,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
