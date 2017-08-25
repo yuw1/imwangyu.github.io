@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://imwangyu.github.io/"/>
-  <updated>2017-08-25T15:10:03.604Z</updated>
+  <updated>2017-08-25T15:13:01.356Z</updated>
   <id>https://imwangyu.github.io/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="https://imwangyu.github.io/2017/08/25/Spring%20Bean%E7%9A%84%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"/>
     <id>https://imwangyu.github.io/2017/08/25/Spring Bean的加载过程/</id>
     <published>2017-08-25T15:10:18.730Z</published>
-    <updated>2017-08-25T15:10:03.604Z</updated>
+    <updated>2017-08-25T15:13:01.356Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 获取当前时间的工具类</span></span></div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">获取当前时间的工具类</div></pre></td></tr></table></figure>
 <p>package cn.net.wangshifu;</p>
 <p>import java.text.SimpleDateFormat;</p>
-<p>public class TimeConvertUtil {<br>    static SimpleDateFormat format = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss:SSS”);<br>    public static String getCurrentTime() {<br>       return format.format(System.currentTimeMillis());<br>    }<br>}<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 测试Bean</span></span></div></pre></td></tr></table></figure></p>
+<p>public class TimeConvertUtil {<br>    static SimpleDateFormat format = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss:SSS”);<br>    public static String getCurrentTime() {<br>       return format.format(System.currentTimeMillis());<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">测试Bean</div></pre></td></tr></table></figure></p>
 <p>package cn.net.wangshifu;</p>
 <p>import org.springframework.beans.factory.InitializingBean;<br>import javax.annotation.PostConstruct;</p>
 <p>public class TestLoadingOrder  implements InitializingBean{</p>
@@ -71,7 +71,7 @@ public void postConstruct(){
     System.out.println(TimeConvertUtil.getCurrentTime()+&quot; TestLoadingOrder.postConstruct has been executed&quot;);
 }
 </code></pre><p>}</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"><span class="comment"># BeanPostProcessor的实现类</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BeanPostProcessor的实现类</div></pre></td></tr></table></figure>
 <p>package cn.net.wangshifu;</p>
 <p>import org.springframework.beans.BeansException;<br>import org.springframework.beans.factory.config.BeanPostProcessor;</p>
 <p>public class MyBeanPostProcessor implements BeanPostProcessor {</p>
@@ -84,7 +84,7 @@ public Object postProcessAfterInitialization(Object o, String s) throws BeansExc
     System.out.println(TimeConvertUtil.getCurrentTime()+&quot; postProcessAfterInitialization :&quot; + o.getClass());
     return o;
 }
-</code></pre><p>}<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"><span class="comment"># BeanFactoryPostProcessor的实现类</span></span></div></pre></td></tr></table></figure></p>
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BeanFactoryPostProcessor的实现类</div></pre></td></tr></table></figure></p>
 <p>package cn.net.wangshifu;</p>
 <p>import org.springframework.beans.BeansException;<br>import org.springframework.beans.factory.config.BeanFactoryPostProcessor;<br>import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;</p>
 <p>public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {</p>
@@ -92,7 +92,7 @@ public Object postProcessAfterInitialization(Object o, String s) throws BeansExc
     System.out.println(TimeConvertUtil.getCurrentTime()+&quot; postProcessBeanFactory has been executed&quot;);
 }
 </code></pre><p>}</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 测试类</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">测试类</div></pre></td></tr></table></figure>
 <p>package cn.net.wangshifu;</p>
 <p>import org.springframework.context.ApplicationContext;<br>import org.springframework.context.support.ClassPathXmlApplicationContext;</p>
 <p>public class Main {</p>
@@ -102,13 +102,13 @@ public Object postProcessAfterInitialization(Object o, String s) throws BeansExc
     System.out.println(&quot;test1: &quot; + TestLoadingOrder.getTest1());
     System.out.println(&quot;test2: &quot; + testLoadingOrder.getTest2());
 }
-</code></pre><p>}<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 运行结果</span></span></div></pre></td></tr></table></figure></p>
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">运行结果</div></pre></td></tr></table></figure></p>
 <p>八月 25, 2017 11:03:24 下午 org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh<br>信息: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@685f4c2e: startup date [Fri Aug 25 23:03:24 CST 2017]; root of context hierarchy<br>八月 25, 2017 11:03:24 下午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions<br>信息: Loading XML bean definitions from class path resource [applicationContext.xml]<br>2017-08-25 23:03:24:594 postProcessBeanFactory has been executed<br>2017-08-25 23:03:24:658 TestLoadingOrder.static has been executed<br>2017-08-25 23:03:24:658 TestLoadingOrder.construct has been executed<br>2017-08-25 23:03:24:685 TestLoadingOrder.setTest2 has been executed<br>2017-08-25 23:03:24:685 postProcessBeforeInitialization :class cn.net.wangshifu.TestLoadingOrder<br>2017-08-25 23:03:24:685 TestLoadingOrder.postConstruct has been executed<br>2017-08-25 23:03:24:685 TestLoadingOrder.afterProSertiesSet has been executed<br>2017-08-25 23:03:24:685 TestLoadingOrder.init has been executed<br>2017-08-25 23:03:24:686 postProcessAfterInitialization :class cn.net.wangshifu.TestLoadingOrder<br>2017-08-25 23:03:24:712 postProcessBeforeInitialization :class java.text.SimpleDateFormat<br>2017-08-25 23:03:24:712 postProcessAfterInitialization :class java.text.SimpleDateFormat<br>2017-08-25 23:03:24:719 postProcessBeforeInitialization :class org.springframework.context.event.EventListenerMethodProcessor<br>2017-08-25 23:03:24:719 postProcessAfterInitialization :class org.springframework.context.event.EventListenerMethodProcessor<br>2017-08-25 23:03:24:723 postProcessBeforeInitialization :class org.springframework.context.event.DefaultEventListenerFactory<br>2017-08-25 23:03:24:723 postProcessAfterInitialization :class org.springframework.context.event.DefaultEventListenerFactory<br>test1: static<br>test2: Test2<br>```</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;lin
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;lin
     
     </summary>
     
