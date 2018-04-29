@@ -1,101 +1,75 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8">
   
-  <title>Become A Better Coder</title>
+  <title>Sometimes Naive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Become A Better Coder">
+<meta property="og:title" content="Sometimes Naive">
 <meta property="og:url" content="https://imwangyu.github.io/index.html">
-<meta property="og:site_name" content="Become A Better Coder">
+<meta property="og:site_name" content="Sometimes Naive">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Become A Better Coder">
+<meta name="twitter:title" content="Sometimes Naive">
   
-    <link rel="alternative" href="/atom.xml" title="Become A Better Coder" type="application/atom+xml">
+    <link rel="alternate" href="/blog/atom.xml" title="Sometimes Naive" type="application/atom+xml">
   
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
   
-    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
-  
-  
-<script type="text/javascript">
-var isWX = /micromessenger/i.test(navigator.userAgent);
-if (isWX) {
-  document.write('<br/><br/><h1 style="text-align: center;font-size:32px;" >╮(╯_╰)╭</h1><br/><br/><h4 style="text-align: center;" >请在浏览器中打开。</h4><br/><h4 style="text-align: center;" >Please open in the browser.</h4>');
-  window.stop ? window.stop() : document.execCommand("Stop");
-}
-</script>
-
 
 </head>
 
 <body>
-<div id="container">
-  <div id="wrap">
-    <header id="header">
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
   <div id="banner"></div>
   <div id="header-outer" class="outer">
-    <nav id="upper-nav" class="inner">
-      <a id="main-nav-toggle" class="nav-icon"></a>
-      <div class="sub-nav">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Sometimes Naive</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a class="main-nav-link" href="/">Home</a>
         
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-          <a id="nav-github" class="nav-icon" href="https://github.com/imwangyu"></a>
+      </nav>
+      <nav id="sub-nav">
         
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://imwangyu.github.io"></form>
       </div>
-    </nav>
-    <div id="header-title">
-      
-        <h1 id="blog-title-wrap">
-          <a href="/" id="blog-title">Sometimes Naive</a>
-        </h1>
-      
     </div>
-    <div id="contenedor">
-      <ul class="cube">
-        <li class="cara">WangYu</li>
-        <li class="cara"></li>
-        <li class="cara"></li>
-        <li class="cara"></li>
-        <li class="cara"></li>
-        <li class="cara"></li>
-      </ul>
-    </div>
-    <nav id="main-nav">
-      
-        <a class="main-nav-link" href="/">主页</a>
-      
-        <a class="main-nav-link" href="/archives">文章</a>
-      
-        <a class="main-nav-link" href="/about">关于</a>
-      
-      <a class="main-nav-link st-search-show-outputs">搜索</a>
-    </nav>
   </div>
 </header>
-
-    <div class="outer">
-      <section id="main">
+      <div class="outer">
+        <section id="main">
   
     <article id="post-Spring Bean的加载过程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/08/25/Spring Bean的加载过程/" class="article-date">
+    <a href="/2017/08/25/Spring Bean的加载过程/" class="article-date">
   <time datetime="2017-08-25T15:10:18.730Z" itemprop="datePublished">2017-08-25</time>
-</h3>
+</a>
     
   </div>
   <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
     
     
       <header class="article-header">
@@ -110,7 +84,6 @@ if (isWX) {
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <h2 id="获取当前时间的工具类"><a href="#获取当前时间的工具类" class="headerlink" title="获取当前时间的工具类"></a>获取当前时间的工具类</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimeConvertUtil</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> SimpleDateFormat format = <span class="keyword">new</span> <span class="type">SimpleDateFormat</span>(<span class="string">"yyyy-MM-dd HH:mm:ss:SSS"</span>);</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">String</span> getCurrentTime() &#123;</div><div class="line">       <span class="keyword">return</span> format.format(System.currentTimeMillis());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="测试Bean"><a href="#测试Bean" class="headerlink" title="测试Bean"></a>测试Bean</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.DisposableBean;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.InitializingBean;</div><div class="line"><span class="keyword">import</span> javax.annotation.PostConstruct;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestLoadingOrder</span>  <span class="keyword">implements</span> <span class="title">InitializingBean</span>,<span class="title">DisposableBean</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String test1;</div><div class="line">    <span class="keyword">private</span> String test2;</div><div class="line"></div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        test1 = <span class="string">"static"</span>;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.static has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getTest1</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> test1;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setTest1</span><span class="params">(String test1)</span> </span>&#123;</div><div class="line">        TestLoadingOrder.test1 = test1;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTest2</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> test2;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTest2</span><span class="params">(String test2)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.test2 = test2;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.setTest2 has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init_method</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.init_method has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy_method</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.destory_method has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    TestLoadingOrder() &#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.construct has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.afterProSertiesSet has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@PostConstruct</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postConstruct</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.postConstruct has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.destory has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="InstantiationAwareBeanPostProcessor的实现类"><a href="#InstantiationAwareBeanPostProcessor的实现类" class="headerlink" title="InstantiationAwareBeanPostProcessor的实现类"></a>InstantiationAwareBeanPostProcessor的实现类</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.beans.BeansException;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.PropertyValues;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.beans.PropertyDescriptor;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor &#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessBeforeInstantiation(Class&lt;?&gt; aClass, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (aClass == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="built_in">boolean</span> postProcessAfterInstantiation(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessAfterInstantiation: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> PropertyValues postProcessPropertyValues(PropertyValues propertyValues, PropertyDescriptor[] propertyDescriptors, <span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessPropertyValues: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessBeforeInitialization(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessBeforeInitialization: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessAfterInitialization(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessAfterInitialization: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -123,31 +96,24 @@ if (isWX) {
       
     </div>
     <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="https://imwangyu.github.io/2017/08/25/Spring Bean的加载过程/" data-id="cjgkknl3r00036s4lx5v8v1sx" class="article-share-link">分享到</a>
-        
-      </div>
+      <a data-url="https://imwangyu.github.io/2017/08/25/Spring Bean的加载过程/" data-id="cjgkkxk0z00009s4lbt852omj" class="article-share-link">Share</a>
+      
+      
     </footer>
-  </div>
-  </div>
   </div>
   
 </article>
 
 
-
   
     <article id="post-字符串的最长不重复子串" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/08/25/字符串的最长不重复子串/" class="article-date">
+    <a href="/2017/08/25/字符串的最长不重复子串/" class="article-date">
   <time datetime="2017-08-25T01:13:05.245Z" itemprop="datePublished">2017-08-25</time>
-</h3>
+</a>
     
   </div>
   <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
     
     
       <header class="article-header">
@@ -162,37 +128,29 @@ if (isWX) {
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class Main &#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">String</span> findLongestPart(<span class="keyword">String</span> <span class="built_in">str</span>) &#123;</div><div class="line">        <span class="built_in">int</span> beginToken = <span class="number">0</span>;<span class="comment">//设置当前最长子串的开始位置，在后面使用的过程中依据HashMap中存的数字的位置来更新这个token值</span></div><div class="line">        <span class="built_in">char</span>[] nums = <span class="built_in">str</span>.toCharArray();</div><div class="line">        <span class="built_in">int</span>[] thisNumLength = <span class="keyword">new</span> <span class="built_in">int</span>[nums.length];<span class="comment">//从当前位置开始的最长子串的长度</span></div><div class="line">        <span class="keyword">HashMap</span>&lt;Character,Integer&gt;lastLocation = <span class="keyword">new</span> <span class="keyword">HashMap</span>&lt;&gt;();<span class="comment">//每个数字在遍历到当前位置时最后出现的位置</span></div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>;i&lt;nums.length;i++) &#123;</div><div class="line">            <span class="keyword">if</span> (lastLocation.containsKey(nums[i])&amp;&amp;lastLocation.<span class="built_in">get</span>(nums[i])+<span class="number">1</span>&gt;beginToken)&#123;</div><div class="line">                beginToken = lastLocation.<span class="built_in">get</span>(nums[i])+<span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> j = beginToken;j&lt;=i;j++)&#123;</div><div class="line">                thisNumLength[j]++;</div><div class="line">            &#125;</div><div class="line">            lastLocation.put(nums[i],i);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">int</span> resultBeginToken = <span class="number">0</span>;<span class="comment">//结果字符串的开始位置</span></div><div class="line">        <span class="built_in">int</span> resultLength = <span class="number">0</span>;<span class="comment">//结果字符串的长度</span></div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>;i&lt;thisNumLength.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span> (thisNumLength[i]&gt;resultLength)&#123;</div><div class="line">                resultBeginToken = i;</div><div class="line">                resultLength = thisNumLength[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">str</span>.substring(resultBeginToken,resultBeginToken+resultLength);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">        <span class="keyword">String</span> test = <span class="string">"absccabdrtyut"</span>;</div><div class="line">        System.out.<span class="built_in">println</span>(findLongestPart(test));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="https://imwangyu.github.io/2017/08/25/字符串的最长不重复子串/" data-id="cjgkknl3p00026s4lvqbrieoo" class="article-share-link">分享到</a>
-        
-      </div>
+      <a data-url="https://imwangyu.github.io/2017/08/25/字符串的最长不重复子串/" data-id="cjgkkxk1e00049s4l9bkxt8x0" class="article-share-link">Share</a>
+      
+      
     </footer>
-  </div>
-  </div>
   </div>
   
 </article>
 
 
-
   
     <article id="post-Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" class="article-date">
+    <a href="/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" class="article-date">
   <time datetime="2017-08-19T06:24:46.791Z" itemprop="datePublished">2017-08-19</time>
-</h3>
+</a>
     
   </div>
   <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
     
     
       <header class="article-header">
@@ -207,7 +165,6 @@ if (isWX) {
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <p>公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMAbstractFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMElement;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMNamespace;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.AxisFault;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.addressing.EndpointReference;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.Options;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.ServiceClient;</span></div><div class="line"></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> java.rmi.RemoteException;</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Axis2Test</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws RemoteException &#123;</div><div class="line">        test();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> test() throws AxisFault &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String url = <span class="string">"目标URL"</span>;</div><div class="line">            Options options = <span class="keyword">new</span> Options();</div><div class="line">            EndpointReference targetEPR = <span class="keyword">new</span> EndpointReference(url);</div><div class="line">            options.setTo(targetEPR);</div><div class="line">            ServiceClient sender = <span class="keyword">new</span> ServiceClient();</div><div class="line">            sender.setOptions(options);</div><div class="line">            OMFactory fac = OMAbstractFactory.getOMFactory();</div><div class="line">            String tns = <span class="string">"目标的TargetNameSpace"</span>;</div><div class="line">            OMNamespace omNs = fac.createOMNamespace(tns, <span class="string">""</span>);</div><div class="line">            OMElement method = fac.createOMElement(<span class="string">"调用的方法名"</span>, omNs);</div><div class="line">            OMElement symbol = fac.createOMElement(<span class="string">"参数名"</span>, omNs);</div><div class="line">            symbol.addChild(fac.createOMText(symbol, <span class="string">"参数值"</span>));</div><div class="line">            method.addChild(symbol);</div><div class="line">            method.build();</div><div class="line">            OMElement result = sender.sendReceive(method);</div><div class="line">            System.out.println(result);</div><div class="line">        &#125; <span class="keyword">catch</span> (AxisFault axisFault) &#123;</div><div class="line">            axisFault.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>在运行这段代码时出现了如下错误：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.AxisFault</span>: System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapException</span>: 服务器未能识别 HTTP 头 SOAPAction 的值: 。</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.Soap11ServerProtocolHelper</span><span class="selector-class">.RouteRequest</span>()</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapServerProtocol</span><span class="selector-class">.RouteRequest</span>(SoapServerMessage message)</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapServerProtocol</span><span class="selector-class">.Initialize</span>()</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.ServerProtocol</span><span class="selector-class">.SetContext</span>(Type type, HttpContext context, HttpRequest request, HttpResponse response)</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.ServerProtocolFactory</span><span class="selector-class">.Create</span>(Type type, HttpContext context, HttpRequest request, HttpResponse response, Boolean&amp; abortProcessing)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.util</span><span class="selector-class">.Utils</span><span class="selector-class">.getInboundFaultFromMessageContext</span>(Utils<span class="selector-class">.java</span>:<span class="number">508</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.handleResponse</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">368</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.send</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">414</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.executeImpl</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">225</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.OperationClient</span><span class="selector-class">.execute</span>(OperationClient<span class="selector-class">.java</span>:<span class="number">150</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.ServiceClient</span><span class="selector-class">.sendReceive</span>(ServiceClient<span class="selector-class">.java</span>:<span class="number">533</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.ServiceClient</span><span class="selector-class">.sendReceive</span>(ServiceClient<span class="selector-class">.java</span>:<span class="number">509</span>)</div><div class="line">	at Axis2Test.test(Axis2Test<span class="selector-class">.java</span>:<span class="number">34</span>)</div><div class="line">	at Axis2Test.main(Axis2Test<span class="selector-class">.java</span>:<span class="number">15</span>)</div></pre></td></tr></table></figure>
@@ -220,31 +177,24 @@ if (isWX) {
       
     </div>
     <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="https://imwangyu.github.io/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" data-id="cjgkknl3j00006s4lno9gl2l5" class="article-share-link">分享到</a>
-        
-      </div>
+      <a data-url="https://imwangyu.github.io/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/" data-id="cjgkkxk1500029s4l2x6alj10" class="article-share-link">Share</a>
+      
+      
     </footer>
-  </div>
-  </div>
   </div>
   
 </article>
 
 
-
   
     <article id="post-通过反射来实现List转为JSON" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/08/19/通过反射来实现List转为JSON/" class="article-date">
+    <a href="/2017/08/19/通过反射来实现List转为JSON/" class="article-date">
   <time datetime="2017-08-19T06:24:24.167Z" itemprop="datePublished">2017-08-19</time>
-</h3>
+</a>
     
   </div>
   <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
     
     
       <header class="article-header">
@@ -259,34 +209,46 @@ if (isWX) {
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">import net.sf.json.JSONArray;</div><div class="line">import net.sf.json.JSONObject;</div><div class="line"></div><div class="line">import java.lang.reflect.InvocationTargetException;</div><div class="line">import java.lang.reflect.Method;</div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Iterator;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> IteratorUtil&lt;T&gt; <span class="comment">&#123;</span></div><div class="line"><span class="comment">    </span></div><div class="line"><span class="comment">    /**</span></div><div class="line"><span class="comment">     * 将List格式转换为JSONArray格式</span></div><div class="line"><span class="comment">     * @param list</span></div><div class="line"><span class="comment">     * @param &lt;T&gt;</span></div><div class="line"><span class="comment">     * @return</span></div><div class="line"><span class="comment">     */</span></div><div class="line"><span class="comment">    public static &lt;T&gt; JSONArray convertToJson(List&lt;T&gt; list)&#123;</span></div><div class="line"><span class="comment">        if (list.size()==0)&#123;</span></div><div class="line"><span class="comment">            System.out.println("list 为空");</span></div><div class="line"><span class="comment">            return null;</span></div><div class="line"><span class="comment">        &#125;</span></div><div class="line">        <span class="keyword">Class</span> clazz = list.get(<span class="number">0</span>).getClass();</div><div class="line">        <span class="function"><span class="keyword">Method</span>[]<span class="title">methods</span> = <span class="title">clazz</span>.<span class="title">getMethods</span><span class="params">()</span>;</span></div><div class="line">        List&lt;<span class="function"><span class="keyword">Method</span>&gt;<span class="title">getMethods</span> = <span class="title">new</span> <span class="title">ArrayList</span>&lt;&gt;<span class="params">()</span>;</span></div><div class="line">        <span class="keyword">for</span> (<span class="function"><span class="keyword">Method</span> <span class="title">method</span>:</span>methods)<span class="comment">&#123;</span></div><div class="line"><span class="comment">            if (method.getName().matches("get[A-z]*")&amp;&amp;method.getDeclaringClass().equals(clazz))&#123;</span></div><div class="line"><span class="comment">                getMethods.add(method);</span></div><div class="line"><span class="comment">            &#125;</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">Iterator</span>&lt;T&gt; <span class="keyword">iterator</span> = list.iterator();</div><div class="line">        JSONArray jsonArray = null;</div><div class="line">        JSONObject jsonObject;</div><div class="line">        <span class="keyword">try</span> <span class="comment">&#123;</span></div><div class="line"><span class="comment">            jsonArray = new JSONArray();</span></div><div class="line"><span class="comment">            while (iterator.hasNext())&#123;</span></div><div class="line"><span class="comment">                jsonObject = new JSONObject();</span></div><div class="line"><span class="comment">                Object instance  = iterator.next();</span></div><div class="line"><span class="comment">                Iterator&lt;Method&gt; methodIterator = getMethods.iterator();</span></div><div class="line"><span class="comment">                while (methodIterator.hasNext())&#123;</span></div><div class="line"><span class="comment">                    Method method = methodIterator.next();</span></div><div class="line"><span class="comment">                    Object value = method.invoke(instance,new Object[]&#123;&#125;</span>);</div><div class="line">                    String field = <span class="function"><span class="keyword">method</span>.<span class="title">getName</span><span class="params">()</span>.<span class="title">substring</span><span class="params">(3,4)</span>.<span class="title">toLowerCase</span><span class="params">()</span>+<span class="title">method</span>.<span class="title">getName</span><span class="params">()</span>.<span class="title">substring</span><span class="params">(4)</span>;</span></div><div class="line">                    jsonObject.put(field,value);</div><div class="line">                &#125;</div><div class="line">                jsonArray.add(jsonObject);</div><div class="line">            &#125;</div><div class="line">        &#125; catch (IllegalAccessException e) <span class="comment">&#123;</span></div><div class="line"><span class="comment">            e.printStackTrace();</span></div><div class="line"><span class="comment">        &#125;</span> catch (InvocationTargetException e) <span class="comment">&#123;</span></div><div class="line"><span class="comment">            e.printStackTrace();</span></div><div class="line"><span class="comment">        &#125;</span><span class="keyword">finally</span> <span class="comment">&#123;</span></div><div class="line"><span class="comment">            return jsonArray;</span></div><div class="line"><span class="comment">        &#125;</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="https://imwangyu.github.io/2017/08/19/通过反射来实现List转为JSON/" data-id="cjgkknl3t00046s4l64yd7kus" class="article-share-link">分享到</a>
-        
-      </div>
+      <a data-url="https://imwangyu.github.io/2017/08/19/通过反射来实现List转为JSON/" data-id="cjgkkxk1800039s4lbm2kn7h9" class="article-share-link">Share</a>
+      
+      
     </footer>
-  </div>
-  </div>
   </div>
   
 </article>
 
 
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
 
   
+    
+
   
-</section>
-      
-      <aside id="sidebar">
+    
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">近期文章</h3>
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -311,59 +273,29 @@ if (isWX) {
   </div>
 
   
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">4</span></li></ul>
-    </div>
-  </div>
-
-  
 </aside>
-      
-    </div>
-    <footer id="footer">
+        
+      </div>
+      <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 Wang Yu<br>
+      &copy; 2018 WangYu<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-      .
-      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
     </div>
   </div>
 </footer>
-  </div>
-  <nav id="mobile-nav">
+    </div>
+    <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">主页</a>
+    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">文章</a>
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
-    <a href="/about" class="mobile-nav-link">关于</a>
-  
-  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
 </nav>
-  
+    
 
-<!-- totop start -->
-<div id="totop">
-	<a title="返回顶部"></a>
-</div>
-<!-- totop end -->
-
-<!-- swiftype search start -->
-
-<!-- swiftype search end -->
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -372,6 +304,6 @@ if (isWX) {
 
 <script src="/js/script.js"></script>
 
-</div>
+  </div>
 </body>
 </html>

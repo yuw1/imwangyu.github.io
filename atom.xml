@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Become A Better Coder</title>
+  <title>Sometimes Naive</title>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>https://imwangyu.github.io/</id>
   
   <author>
-    <name>Wang Yu</name>
+    <name>WangYu</name>
     
   </author>
   
