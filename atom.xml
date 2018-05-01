@@ -274,11 +274,11 @@
       <category term="MySQL" scheme="http://wyu.space/categories/MySQL/"/>
     
     
-      <category term="MySQL" scheme="http://wyu.space/tags/MySQL/"/>
-    
       <category term="知识点" scheme="http://wyu.space/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
       <category term="学习记录" scheme="http://wyu.space/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="MySQL" scheme="http://wyu.space/tags/MySQL/"/>
     
   </entry>
   
@@ -365,11 +365,11 @@
       <category term="解决方法" scheme="http://wyu.space/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     
     
+      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
+    
       <category term="Axis2" scheme="http://wyu.space/tags/Axis2/"/>
     
       <category term="SOAPAction" scheme="http://wyu.space/tags/SOAPAction/"/>
-    
-      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
     
       <category term=".NET" scheme="http://wyu.space/tags/NET/"/>
     
