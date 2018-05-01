@@ -366,6 +366,315 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wyu.space/2018/05/02/MySQL相关知识点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王宇">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sometimes Naive">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/02/MySQL相关知识点/" itemprop="url">
+                  MySQL相关知识点
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-02 01:02:15 / 修改时间：01:04:13" itemprop="dateCreated datePublished" datetime="2018-05-02T01:02:15+08:00">2018-05-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h1><p>使用having过滤分组，使用where过滤行数据。集合操作使用having不使用where</p>
+<p>%匹配0个或多个，_匹配单个</p>
+<p>and 优先级大于 or</p>
+<p>UNION并 </p>
+<p>MINUS差 INTERSECT交 MYSQL不支持</p>
+<p>UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。</p>
+<p>允许重复 UNION ALL</p>
+<p>拼接字段 mysql使用contact() oracle使用“||”和“+”</p>
+<p>MySQL不支持top</p>
+<p>limit要把前面所有的记录扫描出来截取需要的，如果id靠后费时间</p>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>b树索引 </p>
+<p>位图索引</p>
+<h3 id="rowid"><a href="#rowid" class="headerlink" title="rowid"></a>rowid</h3><ol>
+<li>rowid是18位大小写加数字混杂体，唯一表代该条记录在DBF文件中的位置</li>
+<li>MySQL没有</li>
+</ol>
+<p>在定义primary key或unique约束后系统自动在相应的列上创建索引</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ol>
+<li>唯一索引：唯一索引不允许两行具有相同的索引值</li>
+<li>主键索引：为表定义一个主键将自动创建主键索引，主键索引是唯一索引的特殊类型。主键索引要求主键中的每个值是唯一的，并且不能为空</li>
+<li>聚集索引(Clustered)：表中各行的物理顺序与键值的逻辑（索引）顺序相同，每个表只能有一个</li>
+<li>非聚集索引(Non-clustered)：非聚集索引指定表的逻辑顺序。数据存储在一个位置，索引存储在另一个位置，索引中包含指向数据存储位置的指针。一个表上的可以有多个，小于249个</li>
+</ol>
+<h2 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h2><p>GRANT 和INVOKE管理</p>
+<h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h2><p>触发器与单个表相连</p>
+<p>在多表关联的视图上创建触发器</p>
+<h2 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h2><p>MySQL：不同存储引擎支持不同锁机制</p>
+<p>表级锁：开销小，加锁快；不会出现死锁；锁定粒度大，发生锁冲突的概率最高，并发度最低。<br>行级锁：开销大，加锁慢；会出现死锁；锁定粒度最小，发生锁冲突的概率最低，并发度也最高。<br>页面锁：开销和加锁时间界于表锁和行锁之间；会出现死锁；锁定粒度界于表锁和行锁之间，并发度一般</p>
+<h3 id="MyISAM"><a href="#MyISAM" class="headerlink" title="MyISAM"></a>MyISAM</h3><p>select 读锁</p>
+<p>insert update delete 写锁</p>
+<p>MyISAM支持并发锁（local）</p>
+<p>读写争用，写锁获得锁</p>
+<p>一定情况下，允许查询和插入并发执行</p>
+<p>low-priority-updates降低优先级</p>
+<h3 id="INNODB"><a href="#INNODB" class="headerlink" title="INNODB"></a>INNODB</h3><h4 id="支持事务-行级锁"><a href="#支持事务-行级锁" class="headerlink" title="支持事务 行级锁"></a>支持事务 行级锁</h4><p>更新丢失（Lost Update）应用的问题，加锁解决</p>
+<p>脏读（Dirty Reads）</p>
+<p>不可重复读（Non-Repeatable Reads）</p>
+<p>幻读（Phantom Reads） 都是读一致性问题</p>
+<ol>
+<li>加锁解决</li>
+<li>提供时间点的版本快照（MVCC 多版本并发控制）</li>
+</ol>
+<p>未提交读（Read uncommitted） 最低级</p>
+<p>已提交读（Read committed） 语句级</p>
+<p>可重复读（Repeatable read） 事务级</p>
+<p>可序列化（Serializable） 最高级别，事务级</p>
+<p>共享锁 </p>
+<p>排它锁</p>
+<p>意向共享锁（先加意向锁）</p>
+<p>意向排它锁</p>
+<p>update delete insert 自动加排它锁</p>
+<p>select 不加锁</p>
+<p>select … for update 排它锁</p>
+<p>select … lock in share mode 共享锁</p>
+<p>对一个表而言，尽可能以固定的顺序存取表中的行。这样可以大减少死锁的机会。</p>
+<p>只有通过索引条件检索数据，innodb才会使用行级锁，否则使用表锁。</p>
+<p>范围查找不存在的加间隙锁（Next-Key锁）不使用间隙锁会发生幻读 </p>
+<p>造成锁等待</p>
+<p>绝大部分情况下使用行级锁（选择innodb的理由）</p>
+<p>lock tables 加表锁 </p>
+<p>表锁 MySQL Server层管理，autocommit设为0 否则不加锁。</p>
+<p>先commit 再 unlock tables；</p>
+<p>MYISAM锁一次获得，不会产生死锁，INNODB逐步获得，发生死锁 设置innodb_lock_wait_timeout</p>
+<p>事务中要更新记录，直接申请排它锁 </p>
+<p>在REPEATEABLE-READ隔离级别下，如果两个线程同时对相同条件记录用SELECT…ROR UPDATE加排他锁，在没有符合该记录情况下，两个线程都会加锁成功。程序发现记录尚不存在，就试图插入一条新记录，如果两个线程都这么做，就会出现死锁。这种情况下，将隔离级别改成READ COMMITTED，就可以避免问题。</p>
+<p>当隔离级别为READ COMMITED时，如果两个线程都先执行SELECT…FOR UPDATE，判断是否存在符合条件的记录，如果没有，就插入记录。此时，只有一个线程能插入成功，另一个线程会出现锁等待，当第１个线程提交后，第２个线程会因主键重出错，但虽然这个线程出错了，却会获得一个排他锁！这时如果有第３个线程又来申请排他锁，也会出现死锁。对于这种情况，可以直接做插入操作，然后再捕获主键重异常，或者在遇到主键重错误时，总是执行ROLLBACK释放获得的排他锁。</p>
+<h3 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁"></a>悲观锁</h3><p>在查询完数据的时候就把事务锁起来，直到提交事务</p>
+<p>select … for update;</p>
+<h3 id="乐观锁"><a href="#乐观锁" class="headerlink" title="乐观锁"></a>乐观锁</h3><p>在修改数据的时候把事务锁起来，通过version的方式来进行锁定</p>
+<p>update … set … , version = version + 1 where … and version= …;</p>
+<h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><h3 id="主键（不支持非主键聚集索引）"><a href="#主键（不支持非主键聚集索引）" class="headerlink" title="主键（不支持非主键聚集索引）"></a>主键（不支持非主键聚集索引）</h3><p>也是用于控件字段内容不能重复，但它在一个表只允许出现一个。</p>
+<h3 id="Unipqu约束"><a href="#Unipqu约束" class="headerlink" title="Unipqu约束"></a>Unipqu约束</h3><p>控件字段内容不能重复，一个表允许有多个 Unique 约束。</p>
+<h3 id="Check约束"><a href="#Check约束" class="headerlink" title="Check约束"></a>Check约束</h3><p>用于控制字段的值范围。</p>
+<h3 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h3><p>用于预防破坏表之间连接的动作，也能防止非法数据插入外键列，因为它必须是它指向的那个表中的值之一。</p>
+<h3 id="不能为空约束"><a href="#不能为空约束" class="headerlink" title="不能为空约束"></a>不能为空约束</h3><p>用于控制字段的内容一定不能为空（NULL）</p>
+<h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><h3 id="第一范式"><a href="#第一范式" class="headerlink" title="第一范式"></a>第一范式</h3><p>第一范式：字段是最小的的单元不可再分</p>
+<h3 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h3><p>满足第一范式,表中的字段必须完全依赖于全部主键而非部分主键。</p>
+<h3 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h3><p>满足第二范式，非主键外的所有字段必须互不依赖</p>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><p>向视图提供数据内容的语句为 SELECT 语句,可以将视图理解为存储起来的 SELECT 语句</p>
+<p>不提高效率。</p>
+<h2 id="语言分类"><a href="#语言分类" class="headerlink" title="语言分类"></a>语言分类</h2><h3 id="DML-数据操纵语言"><a href="#DML-数据操纵语言" class="headerlink" title="DML 数据操纵语言"></a>DML 数据操纵语言</h3><p>select update insert delete</p>
+<h3 id="DDL-数据库定义语言"><a href="#DDL-数据库定义语言" class="headerlink" title="DDL 数据库定义语言"></a>DDL 数据库定义语言</h3><p>create alter drop</p>
+<h3 id="DCL-数据库控制语言"><a href="#DCL-数据库控制语言" class="headerlink" title="DCL 数据库控制语言"></a>DCL 数据库控制语言</h3><p>grant deny revoke</p>
+<h3 id="delete-drop-truncate-区别"><a href="#delete-drop-truncate-区别" class="headerlink" title="delete drop truncate 区别"></a>delete drop truncate 区别</h3><p>delete逐行删除，删除速度慢</p>
+<h2 id="超键、候选键、主键、外键"><a href="#超键、候选键、主键、外键" class="headerlink" title="超键、候选键、主键、外键"></a>超键、候选键、主键、外键</h2><h3 id="超键"><a href="#超键" class="headerlink" title="超键"></a>超键</h3><p>在关系中能唯一标识元组的属性集称为关系模式的超键</p>
+<h3 id="候选键"><a href="#候选键" class="headerlink" title="候选键"></a>候选键</h3><p>是最小超键，即没有冗余元素的超键。</p>
+<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><p>数据库表中对储存数据对象予以唯一和完整标识的数据列或属性的组合</p>
+<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><p>在一个表中存在的另一个表的主键称此表的外键。</p>
+<h2 id="防止丢失"><a href="#防止丢失" class="headerlink" title="防止丢失"></a>防止丢失</h2><p>archivelog mode(归档模式)只要其归档日志文件不丢失，就可以有效地防止数据丢失。</p>
+<h2 id="MyIASM和Innodb两种引擎所使用的索引的数据结构是什么？"><a href="#MyIASM和Innodb两种引擎所使用的索引的数据结构是什么？" class="headerlink" title="MyIASM和Innodb两种引擎所使用的索引的数据结构是什么？"></a>MyIASM和Innodb两种引擎所使用的索引的数据结构是什么？</h2><p>都是B+树!</p>
+<p>MyIASM引擎，B+树的数据结构中存储的内容实际上是实际数据的地址值。也就是说它的索引和实际数据是分开的，只不过使用索引指向了实际数据。这种索引的模式被称为非聚集索引。</p>
+<p>Innodb引擎的索引的数据结构也是B+树，只不过数据结构中存储的都是实际的数据，这种索引有被称为聚集索引。</p>
+<h2 id="varchar和char的区别"><a href="#varchar和char的区别" class="headerlink" title="varchar和char的区别"></a>varchar和char的区别</h2><p>Char是一种固定长度的类型，varchar是一种可变长度的类型</p>
+<h2 id="mysql有关权限的表都有哪几个"><a href="#mysql有关权限的表都有哪几个" class="headerlink" title="mysql有关权限的表都有哪几个"></a>mysql有关权限的表都有哪几个</h2><p>权限表存放在mysql数据库里，由mysql_install_db脚本初始化</p>
+<ol>
+<li>user权限表：记录允许连接到服务器的用户帐号信息，里面的权限是全局级的。</li>
+<li>db权限表：记录各个帐号在各个数据库上的操作权限。</li>
+<li>table_priv权限表：记录数据表级的操作权限。</li>
+<li>columns_priv权限表：记录数据列级的操作权限。</li>
+<li>host权限表：配合db权限表对给定主机上数据库级操作权限作更细致的控制。这个权限表不受GRANT和REVOKE语句的影响。</li>
+</ol>
+<h2 id="数据表修复（MyISAM）"><a href="#数据表修复（MyISAM）" class="headerlink" title="数据表修复（MyISAM）"></a>数据表修复（MyISAM）</h2><p>使用 myisamchk 来修复</p>
+<ol>
+<li>修复前将mysql服务停止。</li>
+<li>打开命令行方式，然后进入到mysql的/bin目录。</li>
+<li>执行myisamchk –recover 数据库所在路径/*.MYI</li>
+</ol>
+<p>REPAIR TABLE 用于修复被破坏的表。<br>OPTIMIZE TABLE 用于回收闲置的数据库空间，当表上的数据行被删除时，所占据的磁盘空间并没有立即被回收，使用了OPTIMIZE TABLE命令后这些空间将被回收，并且对磁盘上的数据行进行重排（注意：是磁盘上，而非数据库）</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h4 id="选择最有效率的表名顺序"><a href="#选择最有效率的表名顺序" class="headerlink" title="选择最有效率的表名顺序"></a>选择最有效率的表名顺序</h4><p>数据库的解析器按照从右到左的顺序处理FROM子句中的表名，FROM子句中写在最后的表将被最先处理<br>在FROM子句中包含多个表的情况下：</p>
+<ol>
+<li><p>如果三个表是完全无关系的话，将记录和列名最少的表，写在最后，然后依次类推<br>也就是说：选择记录条数最少的表放在最后</p>
+</li>
+<li><p>如果有3个以上的表连接查询：<br>如果三个表是有关系的话，将引用最多的表，放在最后，然后依次类推。<br>也就是说：被其他表所引用的表放在最后</p>
+<h4 id="WHERE子句中的连接顺序"><a href="#WHERE子句中的连接顺序" class="headerlink" title="WHERE子句中的连接顺序"></a>WHERE子句中的连接顺序</h4><p>表之间的连接必须写在其他WHERE条件之左,那些可以过滤掉最大数量记录的条件必须写在WHERE子句的之右。</p>
+<h4 id="SELECT子句中避免使用-号"><a href="#SELECT子句中避免使用-号" class="headerlink" title="SELECT子句中避免使用*号"></a>SELECT子句中避免使用*号</h4></li>
+</ol>
+<h4 id="用TRUNCATE替代DELETE"><a href="#用TRUNCATE替代DELETE" class="headerlink" title="用TRUNCATE替代DELETE"></a>用TRUNCATE替代DELETE</h4><p>删除表的全部记录，除了表结构才这样做。</p>
+<h4 id="多使用内部函数提高SQL效率"><a href="#多使用内部函数提高SQL效率" class="headerlink" title="多使用内部函数提高SQL效率"></a>多使用内部函数提高SQL效率</h4><p>使用mysql的concat()函数会比使用||来进行拼接快，因为concat()函数已经被mysql优化过了。</p>
+<h4 id="使用表或列的别名"><a href="#使用表或列的别名" class="headerlink" title="使用表或列的别名"></a>使用表或列的别名</h4><p>如果表或列的名称太长了，使用一些简短的别名也能稍微提高一些SQL的性能。要扫描的字符长度就变少了</p>
+<h4 id="多使用commit"><a href="#多使用commit" class="headerlink" title="多使用commit"></a>多使用commit</h4><p>释放回滚点</p>
+<h4 id="索引-1"><a href="#索引-1" class="headerlink" title="索引"></a>索引</h4><h4 id="SQL写大写（Oracle）"><a href="#SQL写大写（Oracle）" class="headerlink" title="SQL写大写（Oracle）"></a>SQL写大写（Oracle）</h4><h4 id="避免在索引列上使用NOT（全表扫描）"><a href="#避免在索引列上使用NOT（全表扫描）" class="headerlink" title="避免在索引列上使用NOT（全表扫描）"></a>避免在索引列上使用NOT（全表扫描）</h4><h4 id="避免在索引列上使用计算（全表扫描）"><a href="#避免在索引列上使用计算（全表扫描）" class="headerlink" title="避免在索引列上使用计算（全表扫描）"></a>避免在索引列上使用计算（全表扫描）</h4><h4 id="用-gt-替代-gt-（低效）"><a href="#用-gt-替代-gt-（低效）" class="headerlink" title="用 &gt;= 替代 &gt;（低效）"></a>用 &gt;= 替代 &gt;（低效）</h4><h4 id="用IN替代OR"><a href="#用IN替代OR" class="headerlink" title="用IN替代OR"></a>用IN替代OR</h4><h4 id="总是使用索引的第一个列"><a href="#总是使用索引的第一个列" class="headerlink" title="总是使用索引的第一个列"></a>总是使用索引的第一个列</h4>
+          
+        
+      
+    </div>
+
+    
+	
+	<div>
+      
+    </div>
+
+    
+    
+    
+	
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wyu.space/2017/08/25/Spring Bean的加载过程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -510,15 +819,16 @@
       
         
           
-          获取当前时间的工具类12345678910package cn.net.wangshifu;import java.text.SimpleDateFormat;public class TimeConvertUtil &#123;    static SimpleDateFormat format 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/25/Spring Bean的加载过程/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="获取当前时间的工具类"><a href="#获取当前时间的工具类" class="headerlink" title="获取当前时间的工具类"></a>获取当前时间的工具类</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimeConvertUtil</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> SimpleDateFormat format = <span class="keyword">new</span> <span class="type">SimpleDateFormat</span>(<span class="string">"yyyy-MM-dd HH:mm:ss:SSS"</span>);</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">String</span> getCurrentTime() &#123;</div><div class="line">       <span class="keyword">return</span> format.format(System.currentTimeMillis());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="测试Bean"><a href="#测试Bean" class="headerlink" title="测试Bean"></a>测试Bean</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.DisposableBean;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.InitializingBean;</div><div class="line"><span class="keyword">import</span> javax.annotation.PostConstruct;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestLoadingOrder</span>  <span class="keyword">implements</span> <span class="title">InitializingBean</span>,<span class="title">DisposableBean</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String test1;</div><div class="line">    <span class="keyword">private</span> String test2;</div><div class="line"></div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        test1 = <span class="string">"static"</span>;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.static has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getTest1</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> test1;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setTest1</span><span class="params">(String test1)</span> </span>&#123;</div><div class="line">        TestLoadingOrder.test1 = test1;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTest2</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> test2;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTest2</span><span class="params">(String test2)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.test2 = test2;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.setTest2 has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init_method</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.init_method has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy_method</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.destory_method has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    TestLoadingOrder() &#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.construct has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPropertiesSet</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.afterProSertiesSet has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@PostConstruct</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postConstruct</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.postConstruct has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" TestLoadingOrder.destory has been executed"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="InstantiationAwareBeanPostProcessor的实现类"><a href="#InstantiationAwareBeanPostProcessor的实现类" class="headerlink" title="InstantiationAwareBeanPostProcessor的实现类"></a>InstantiationAwareBeanPostProcessor的实现类</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.beans.BeansException;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.PropertyValues;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.beans.PropertyDescriptor;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor &#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessBeforeInstantiation(Class&lt;?&gt; aClass, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (aClass == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="built_in">boolean</span> postProcessAfterInstantiation(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessAfterInstantiation: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> PropertyValues postProcessPropertyValues(PropertyValues propertyValues, PropertyDescriptor[] propertyDescriptors, <span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessPropertyValues: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessBeforeInitialization(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessBeforeInitialization: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessAfterInitialization(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass() == TestLoadingOrder.class) &#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" InstantiationAwareBeanPostProcessor.postProcessAfterInitialization: "</span>+s);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="BeanPostProcessor的实现类"><a href="#BeanPostProcessor的实现类" class="headerlink" title="BeanPostProcessor的实现类"></a>BeanPostProcessor的实现类</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.beans.BeansException;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.config.BeanPostProcessor;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class MyBeanPostProcessor implements BeanPostProcessor &#123;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessBeforeInitialization(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass()==TestLoadingOrder.class)&#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" BeanPostProcessor.postProcessBeforeInitialization :"</span> + o.getClass());</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">Object</span> postProcessAfterInitialization(<span class="keyword">Object</span> o, <span class="keyword">String</span> s) <span class="keyword">throws</span> BeansException &#123;</div><div class="line">        <span class="keyword">if</span> (o.getClass()==TestLoadingOrder.class)&#123;</div><div class="line">            System.out.<span class="built_in">println</span>(TimeConvertUtil.getCurrentTime()+<span class="string">" BeanPostProcessor.postProcessAfterInitialization :"</span> + o.getClass());</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> o;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="BeanFactoryPostProcessor的实现类"><a href="#BeanFactoryPostProcessor的实现类" class="headerlink" title="BeanFactoryPostProcessor的实现类"></a>BeanFactoryPostProcessor的实现类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.beans.BeansException;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.config.BeanFactoryPostProcessor;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.config.ConfigurableListableBeanFactory;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBeanFactoryPostProcessor</span> <span class="keyword">implements</span> <span class="title">BeanFactoryPostProcessor</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postProcessBeanFactory</span><span class="params">(ConfigurableListableBeanFactory configurableListableBeanFactory)</span> <span class="keyword">throws</span> BeansException </span>&#123;</div><div class="line">        System.out.println(TimeConvertUtil.getCurrentTime()+<span class="string">" postProcessBeanFactory has been executed"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="applicationContext-xml"><a href="#applicationContext-xml" class="headerlink" title="applicationContext.xml"></a>applicationContext.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></div><div class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></span></div><div class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></div><div class="line"><span class="tag"><span class="string">        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"testLoadingOrder"</span> <span class="attr">class</span>=<span class="string">"cn.net.wangshifu.TestLoadingOrder"</span> <span class="attr">init-method</span>=<span class="string">"init_method"</span> <span class="attr">destroy-method</span>=<span class="string">"destroy_method"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"test2"</span> <span class="attr">value</span>=<span class="string">"Test2"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"instantiationAwareBeanPostProcessor"</span> <span class="attr">class</span>=<span class="string">"cn.net.wangshifu.MyInstantiationAwareBeanPostProcessor"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myBeanPostProcessor"</span> <span class="attr">class</span>=<span class="string">"cn.net.wangshifu.MyBeanPostProcessor"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myBeanFactoryPostProcessor"</span> <span class="attr">class</span>=<span class="string">"cn.net.wangshifu.MyBeanFactoryPostProcessor"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"cn.net.wangshifu"</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h2><figure class="highlight d"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> cn.net.wangshifu;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> Main &#123;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) &#123;</div><div class="line">        ApplicationContext applicationContext = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</div><div class="line">        TestLoadingOrder testLoadingOrder = (TestLoadingOrder) applicationContext.getBean(<span class="string">"testLoadingOrder"</span>);</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"test1: "</span> + TestLoadingOrder.getTest1());</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"test2: "</span> + testLoadingOrder.getTest2());</div><div class="line">        ((ClassPathXmlApplicationContext)applicationContext).registerShutdownHook();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">八月 <span class="selector-tag">28</span>, <span class="selector-tag">2017</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:06</span> 上午 <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.support</span><span class="selector-class">.ClassPathXmlApplicationContext</span> <span class="selector-tag">prepareRefresh</span></div><div class="line">信息: <span class="selector-tag">Refreshing</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.support</span><span class="selector-class">.ClassPathXmlApplicationContext</span>@<span class="selector-tag">685f4c2e</span>: <span class="selector-tag">startup</span> <span class="selector-tag">date</span> <span class="selector-attr">[Mon Aug 28 10:40:06 CST 2017]</span>; <span class="selector-tag">root</span> <span class="selector-tag">of</span> <span class="selector-tag">context</span> <span class="selector-tag">hierarchy</span></div><div class="line">八月 <span class="selector-tag">28</span>, <span class="selector-tag">2017</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:06</span> 上午 <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.beans</span><span class="selector-class">.factory</span><span class="selector-class">.xml</span><span class="selector-class">.XmlBeanDefinitionReader</span> <span class="selector-tag">loadBeanDefinitions</span></div><div class="line">信息: <span class="selector-tag">Loading</span> <span class="selector-tag">XML</span> <span class="selector-tag">bean</span> <span class="selector-tag">definitions</span> <span class="selector-tag">from</span> <span class="selector-tag">class</span> <span class="selector-tag">path</span> <span class="selector-tag">resource</span> <span class="selector-attr">[applicationContext.xml]</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:037</span> <span class="selector-tag">postProcessBeanFactory</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:078</span> <span class="selector-tag">InstantiationAwareBeanPostProcessor</span><span class="selector-class">.postProcessBeforeInstantiation</span>: <span class="selector-tag">testLoadingOrder</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:081</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.static</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:082</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.construct</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:089</span> <span class="selector-tag">InstantiationAwareBeanPostProcessor</span><span class="selector-class">.postProcessAfterInstantiation</span>: <span class="selector-tag">testLoadingOrder</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:089</span> <span class="selector-tag">InstantiationAwareBeanPostProcessor</span><span class="selector-class">.postProcessBeforeInitialization</span>: <span class="selector-tag">testLoadingOrder</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:089</span> <span class="selector-tag">BeanPostProcessor</span><span class="selector-class">.postProcessBeforeInitialization</span> <span class="selector-pseudo">:class</span> <span class="selector-tag">cn</span><span class="selector-class">.net</span><span class="selector-class">.wangshifu</span><span class="selector-class">.TestLoadingOrder</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:089</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.postConstruct</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:090</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.afterProSertiesSet</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:090</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.init_method</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:090</span> <span class="selector-tag">InstantiationAwareBeanPostProcessor</span><span class="selector-class">.postProcessAfterInitialization</span>: <span class="selector-tag">testLoadingOrder</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:090</span> <span class="selector-tag">BeanPostProcessor</span><span class="selector-class">.postProcessAfterInitialization</span> <span class="selector-pseudo">:class</span> <span class="selector-tag">cn</span><span class="selector-class">.net</span><span class="selector-class">.wangshifu</span><span class="selector-class">.TestLoadingOrder</span></div><div class="line"><span class="selector-tag">test1</span>: <span class="selector-tag">static</span></div><div class="line"><span class="selector-tag">test2</span>: <span class="selector-tag">null</span></div><div class="line">八月 <span class="selector-tag">28</span>, <span class="selector-tag">2017</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span> 上午 <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.support</span><span class="selector-class">.ClassPathXmlApplicationContext</span> <span class="selector-tag">doClose</span></div><div class="line">信息: <span class="selector-tag">Closing</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.support</span><span class="selector-class">.ClassPathXmlApplicationContext</span>@<span class="selector-tag">685f4c2e</span>: <span class="selector-tag">startup</span> <span class="selector-tag">date</span> <span class="selector-attr">[Mon Aug 28 10:40:06 CST 2017]</span>; <span class="selector-tag">root</span> <span class="selector-tag">of</span> <span class="selector-tag">context</span> <span class="selector-tag">hierarchy</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:132</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.destory</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div><div class="line"><span class="selector-tag">2017-08-28</span> <span class="selector-tag">10</span><span class="selector-pseudo">:40</span><span class="selector-pseudo">:07</span><span class="selector-pseudo">:132</span> <span class="selector-tag">TestLoadingOrder</span><span class="selector-class">.destory_method</span> <span class="selector-tag">has</span> <span class="selector-tag">been</span> <span class="selector-tag">executed</span></div></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -718,15 +1028,9 @@
       
         
           
-          1234567891011121314151617181920212223242526272829303132import java.util.*;public class Main &#123;    public static String findLongestPart(String str)
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/25/字符串的最长不重复子串/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class Main &#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">String</span> findLongestPart(<span class="keyword">String</span> <span class="built_in">str</span>) &#123;</div><div class="line">        <span class="built_in">int</span> beginToken = <span class="number">0</span>;<span class="comment">//设置当前最长子串的开始位置，在后面使用的过程中依据HashMap中存的数字的位置来更新这个token值</span></div><div class="line">        <span class="built_in">char</span>[] nums = <span class="built_in">str</span>.toCharArray();</div><div class="line">        <span class="built_in">int</span>[] thisNumLength = <span class="keyword">new</span> <span class="built_in">int</span>[nums.length];<span class="comment">//从当前位置开始的最长子串的长度</span></div><div class="line">        <span class="keyword">HashMap</span>&lt;Character,Integer&gt;lastLocation = <span class="keyword">new</span> <span class="keyword">HashMap</span>&lt;&gt;();<span class="comment">//每个数字在遍历到当前位置时最后出现的位置</span></div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>;i&lt;nums.length;i++) &#123;</div><div class="line">            <span class="keyword">if</span> (lastLocation.containsKey(nums[i])&amp;&amp;lastLocation.<span class="built_in">get</span>(nums[i])+<span class="number">1</span>&gt;beginToken)&#123;</div><div class="line">                beginToken = lastLocation.<span class="built_in">get</span>(nums[i])+<span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> j = beginToken;j&lt;=i;j++)&#123;</div><div class="line">                thisNumLength[j]++;</div><div class="line">            &#125;</div><div class="line">            lastLocation.put(nums[i],i);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">int</span> resultBeginToken = <span class="number">0</span>;<span class="comment">//结果字符串的开始位置</span></div><div class="line">        <span class="built_in">int</span> resultLength = <span class="number">0</span>;<span class="comment">//结果字符串的长度</span></div><div class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>;i&lt;thisNumLength.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span> (thisNumLength[i]&gt;resultLength)&#123;</div><div class="line">                resultBeginToken = i;</div><div class="line">                resultLength = thisNumLength[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">str</span>.substring(resultBeginToken,resultBeginToken+resultLength);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">        <span class="keyword">String</span> test = <span class="string">"absccabdrtyut"</span>;</div><div class="line">        System.out.<span class="built_in">println</span>(findLongestPart(test));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -926,15 +1230,16 @@
       
         
           
-          公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：12345678910111213141516171819202122232425262728293031323334353637383940import org.apache.axiom.om.OMAbs
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/19/Axis2 服务器未能识别 HTTP 头 SOAPAction 的值 的解决办法/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>公司的WebService服务端使用.NET生成，客户端需要使用Java来写，客户端代码如下：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMAbstractFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMElement;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMNamespace;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.AxisFault;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.addressing.EndpointReference;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.Options;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.ServiceClient;</span></div><div class="line"></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> java.rmi.RemoteException;</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Axis2Test</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws RemoteException &#123;</div><div class="line">        test();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> test() throws AxisFault &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String url = <span class="string">"目标URL"</span>;</div><div class="line">            Options options = <span class="keyword">new</span> Options();</div><div class="line">            EndpointReference targetEPR = <span class="keyword">new</span> EndpointReference(url);</div><div class="line">            options.setTo(targetEPR);</div><div class="line">            ServiceClient sender = <span class="keyword">new</span> ServiceClient();</div><div class="line">            sender.setOptions(options);</div><div class="line">            OMFactory fac = OMAbstractFactory.getOMFactory();</div><div class="line">            String tns = <span class="string">"目标的TargetNameSpace"</span>;</div><div class="line">            OMNamespace omNs = fac.createOMNamespace(tns, <span class="string">""</span>);</div><div class="line">            OMElement method = fac.createOMElement(<span class="string">"调用的方法名"</span>, omNs);</div><div class="line">            OMElement symbol = fac.createOMElement(<span class="string">"参数名"</span>, omNs);</div><div class="line">            symbol.addChild(fac.createOMText(symbol, <span class="string">"参数值"</span>));</div><div class="line">            method.addChild(symbol);</div><div class="line">            method.build();</div><div class="line">            OMElement result = sender.sendReceive(method);</div><div class="line">            System.out.println(result);</div><div class="line">        &#125; <span class="keyword">catch</span> (AxisFault axisFault) &#123;</div><div class="line">            axisFault.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在运行这段代码时出现了如下错误：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.AxisFault</span>: System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapException</span>: 服务器未能识别 HTTP 头 SOAPAction 的值: 。</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.Soap11ServerProtocolHelper</span><span class="selector-class">.RouteRequest</span>()</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapServerProtocol</span><span class="selector-class">.RouteRequest</span>(SoapServerMessage message)</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.SoapServerProtocol</span><span class="selector-class">.Initialize</span>()</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.ServerProtocol</span><span class="selector-class">.SetContext</span>(Type type, HttpContext context, HttpRequest request, HttpResponse response)</div><div class="line">   在 System<span class="selector-class">.Web</span><span class="selector-class">.Services</span><span class="selector-class">.Protocols</span><span class="selector-class">.ServerProtocolFactory</span><span class="selector-class">.Create</span>(Type type, HttpContext context, HttpRequest request, HttpResponse response, Boolean&amp; abortProcessing)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.util</span><span class="selector-class">.Utils</span><span class="selector-class">.getInboundFaultFromMessageContext</span>(Utils<span class="selector-class">.java</span>:<span class="number">508</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.handleResponse</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">368</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.send</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">414</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.description</span><span class="selector-class">.OutInAxisOperationClient</span><span class="selector-class">.executeImpl</span>(OutInAxisOperation<span class="selector-class">.java</span>:<span class="number">225</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.OperationClient</span><span class="selector-class">.execute</span>(OperationClient<span class="selector-class">.java</span>:<span class="number">150</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.ServiceClient</span><span class="selector-class">.sendReceive</span>(ServiceClient<span class="selector-class">.java</span>:<span class="number">533</span>)</div><div class="line">	at org<span class="selector-class">.apache</span><span class="selector-class">.axis2</span><span class="selector-class">.client</span><span class="selector-class">.ServiceClient</span><span class="selector-class">.sendReceive</span>(ServiceClient<span class="selector-class">.java</span>:<span class="number">509</span>)</div><div class="line">	at Axis2Test.test(Axis2Test<span class="selector-class">.java</span>:<span class="number">34</span>)</div><div class="line">	at Axis2Test.main(Axis2Test<span class="selector-class">.java</span>:<span class="number">15</span>)</div></pre></td></tr></table></figure>
+<p>经过查找之后发现JAX-WS规范不需要SoapAction，但是.NET需要，所以产生了这个错误。<br>在上网查找了之后发现可以在option对象下添加一个属性：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute"><span class="nomarkup">options</span></span>.setAction(<span class="string">"目标的TargetNameSpace"</span>+<span class="string">"调用的方法名"</span>);</div></pre></td></tr></table></figure>
+<p>添加后代码为：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMAbstractFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMElement;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMFactory;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axiom.om.OMNamespace;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.AxisFault;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.addressing.EndpointReference;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.Options;</span></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> org.apache.axis2.client.ServiceClient;</span></div><div class="line"></div><div class="line"><span class="meta"><span class="meta-keyword">import</span> java.rmi.RemoteException;</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Axis2Test</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) throws RemoteException &#123;</div><div class="line">        test();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> test() throws AxisFault &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String url = <span class="string">"目标URL"</span>;</div><div class="line">            Options options = <span class="keyword">new</span> Options();</div><div class="line">            EndpointReference targetEPR = <span class="keyword">new</span> EndpointReference(url);</div><div class="line">            options.setTo(targetEPR);</div><div class="line">            options.setAction(<span class="string">"目标的TargetNameSpace"</span>+<span class="string">"调用的方法名"</span>);<span class="comment">//需要加上这条语句</span></div><div class="line">            ServiceClient sender = <span class="keyword">new</span> ServiceClient();</div><div class="line">            sender.setOptions(options);</div><div class="line">            OMFactory fac = OMAbstractFactory.getOMFactory();</div><div class="line">            String tns = <span class="string">"目标的TargetNameSpace"</span>;</div><div class="line">            OMNamespace omNs = fac.createOMNamespace(tns, <span class="string">""</span>);</div><div class="line">            OMElement method = fac.createOMElement(<span class="string">"调用的方法名"</span>, omNs);</div><div class="line">            OMElement symbol = fac.createOMElement(<span class="string">"参数名"</span>, omNs);</div><div class="line">            symbol.addChild(fac.createOMText(symbol, <span class="string">"参数值"</span>));</div><div class="line">            method.addChild(symbol);</div><div class="line">            method.build();</div><div class="line">            OMElement result = sender.sendReceive(method);</div><div class="line">            System.out.println(result);</div><div class="line">        &#125; <span class="keyword">catch</span> (AxisFault axisFault) &#123;</div><div class="line">            axisFault.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>修改后信息返回成功</p>
+
+          
         
       
     </div>
@@ -1134,15 +1439,8 @@
       
         
           
-          123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657import net.sf.json.JSONArray;import net.sf.js
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/19/通过反射来实现List转为JSON/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">import net.sf.json.JSONArray;</div><div class="line">import net.sf.json.JSONObject;</div><div class="line"></div><div class="line">import java.lang.reflect.InvocationTargetException;</div><div class="line">import java.lang.reflect.Method;</div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Iterator;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> IteratorUtil&lt;T&gt; <span class="comment">&#123;</span></div><div class="line"><span class="comment">    </span></div><div class="line"><span class="comment">    /**</span></div><div class="line"><span class="comment">     * 将List格式转换为JSONArray格式</span></div><div class="line"><span class="comment">     * @param list</span></div><div class="line"><span class="comment">     * @param &lt;T&gt;</span></div><div class="line"><span class="comment">     * @return</span></div><div class="line"><span class="comment">     */</span></div><div class="line"><span class="comment">    public static &lt;T&gt; JSONArray convertToJson(List&lt;T&gt; list)&#123;</span></div><div class="line"><span class="comment">        if (list.size()==0)&#123;</span></div><div class="line"><span class="comment">            System.out.println("list 为空");</span></div><div class="line"><span class="comment">            return null;</span></div><div class="line"><span class="comment">        &#125;</span></div><div class="line">        <span class="keyword">Class</span> clazz = list.get(<span class="number">0</span>).getClass();</div><div class="line">        <span class="function"><span class="keyword">Method</span>[]<span class="title">methods</span> = <span class="title">clazz</span>.<span class="title">getMethods</span><span class="params">()</span>;</span></div><div class="line">        List&lt;<span class="function"><span class="keyword">Method</span>&gt;<span class="title">getMethods</span> = <span class="title">new</span> <span class="title">ArrayList</span>&lt;&gt;<span class="params">()</span>;</span></div><div class="line">        <span class="keyword">for</span> (<span class="function"><span class="keyword">Method</span> <span class="title">method</span>:</span>methods)<span class="comment">&#123;</span></div><div class="line"><span class="comment">            if (method.getName().matches("get[A-z]*")&amp;&amp;method.getDeclaringClass().equals(clazz))&#123;</span></div><div class="line"><span class="comment">                getMethods.add(method);</span></div><div class="line"><span class="comment">            &#125;</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">Iterator</span>&lt;T&gt; <span class="keyword">iterator</span> = list.iterator();</div><div class="line">        JSONArray jsonArray = null;</div><div class="line">        JSONObject jsonObject;</div><div class="line">        <span class="keyword">try</span> <span class="comment">&#123;</span></div><div class="line"><span class="comment">            jsonArray = new JSONArray();</span></div><div class="line"><span class="comment">            while (iterator.hasNext())&#123;</span></div><div class="line"><span class="comment">                jsonObject = new JSONObject();</span></div><div class="line"><span class="comment">                Object instance  = iterator.next();</span></div><div class="line"><span class="comment">                Iterator&lt;Method&gt; methodIterator = getMethods.iterator();</span></div><div class="line"><span class="comment">                while (methodIterator.hasNext())&#123;</span></div><div class="line"><span class="comment">                    Method method = methodIterator.next();</span></div><div class="line"><span class="comment">                    Object value = method.invoke(instance,new Object[]&#123;&#125;</span>);</div><div class="line">                    String field = <span class="function"><span class="keyword">method</span>.<span class="title">getName</span><span class="params">()</span>.<span class="title">substring</span><span class="params">(3,4)</span>.<span class="title">toLowerCase</span><span class="params">()</span>+<span class="title">method</span>.<span class="title">getName</span><span class="params">()</span>.<span class="title">substring</span><span class="params">(4)</span>;</span></div><div class="line">                    jsonObject.put(field,value);</div><div class="line">                &#125;</div><div class="line">                jsonArray.add(jsonObject);</div><div class="line">            &#125;</div><div class="line">        &#125; catch (IllegalAccessException e) <span class="comment">&#123;</span></div><div class="line"><span class="comment">            e.printStackTrace();</span></div><div class="line"><span class="comment">        &#125;</span> catch (InvocationTargetException e) <span class="comment">&#123;</span></div><div class="line"><span class="comment">            e.printStackTrace();</span></div><div class="line"><span class="comment">        &#125;</span><span class="keyword">finally</span> <span class="comment">&#123;</span></div><div class="line"><span class="comment">            return jsonArray;</span></div><div class="line"><span class="comment">        &#125;</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
         
       
     </div>
@@ -1230,7 +1528,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1251,7 +1549,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1286,7 +1586,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1367,7 +1673,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">22k</span>
   
 
   
@@ -1378,7 +1684,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   
 </div>
 
