@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyu.space/"/>
-  <updated>2018-05-01T17:12:36.329Z</updated>
+  <updated>2018-05-02T07:50:39.602Z</updated>
   <id>http://wyu.space/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux操作与知识点</title>
+    <link href="http://wyu.space/2018/05/02/Linux%E6%93%8D%E4%BD%9C%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://wyu.space/2018/05/02/Linux操作与知识点/</id>
+    <published>2018-05-02T07:37:24.000Z</published>
+    <updated>2018-05-02T07:50:39.602Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="X-Window"><a href="#X-Window" class="headerlink" title="X Window"></a>X Window</h2><h3 id="重启X-Window"><a href="#重启X-Window" class="headerlink" title="重启X Window"></a>重启X Window</h3><ol>
+<li>注销后重新登录</li>
+<li>快捷键：Alt + Ctrl + Backspace</li>
+</ol>
+<h3 id="终端界面与图形界面切换"><a href="#终端界面与图形界面切换" class="headerlink" title="终端界面与图形界面切换"></a>终端界面与图形界面切换</h3><p>终端界面：Ctrl + Alt + F1~F6，运行级别为3,进程名对应tty1~tty6<br>图形界面：Ctrl + Alt + F7，运行级别为5, 进程名tty7</p>
+<h3 id="注销Linux"><a href="#注销Linux" class="headerlink" title="注销Linux"></a>注销Linux</h3><p>exit</p>
+<h3 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a>运行级别</h3><ul>
+<li>0：关机</li>
+<li>3：完全多用户模式</li>
+<li>5：X Window系统</li>
+<li>6：重启系统</li>
+</ul>
+<h3 id="默认运行级别"><a href="#默认运行级别" class="headerlink" title="默认运行级别"></a>默认运行级别</h3><p>/etc/inittab</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;基本操作&quot;&gt;&lt;a href=&quot;#基本操作&quot; class=&quot;headerlink&quot; title=&quot;基本操作&quot;&gt;&lt;/a&gt;基本操作&lt;/h1&gt;&lt;h2 id=&quot;X-Window&quot;&gt;&lt;a href=&quot;#X-Window&quot; class=&quot;headerlink&quot; title=&quot;X
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://wyu.space/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://wyu.space/tags/Linux/"/>
+    
+      <category term="知识点" scheme="http://wyu.space/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+      <category term="学习记录" scheme="http://wyu.space/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Java相关知识点</title>
