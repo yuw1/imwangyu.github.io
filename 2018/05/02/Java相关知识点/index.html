@@ -116,7 +116,7 @@
 
 
   <meta name="description" content="CGLIB和Java动态代理的区别 Java动态代理只能够对接口进行代理，不能对普通的类进行代理（因为所有生成的代理类的父类为Proxy，Java类继承机制不允许多重继承）；CGLIB能够代理普通类； Java动态代理使用Java原生的反射API进行操作，在生成类上比较高效；CGLIB使用ASM框架直接对字节码进行操作，在类的执行过程中比较高效  锁synchronized同步代码块 使用字节码指">
-<meta name="keywords" content="Java,知识点,学习记录">
+<meta name="keywords" content="Java,知识点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java相关知识点">
 <meta property="og:url" content="http://wyu.space/2018/05/02/Java相关知识点/index.html">
@@ -135,7 +135,7 @@
 <meta property="og:image" content="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/49640930.jpg">
 <meta property="og:image" content="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/35826754.jpg">
 <meta property="og:image" content="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/1366019.jpg">
-<meta property="og:updated_time" content="2018-05-01T17:12:36.329Z">
+<meta property="og:updated_time" content="2018-05-02T15:36:35.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java相关知识点">
 <meta name="twitter:description" content="CGLIB和Java动态代理的区别 Java动态代理只能够对接口进行代理，不能对普通的类进行代理（因为所有生成的代理类的父类为Proxy，Java类继承机制不允许多重继承）；CGLIB能够代理普通类； Java动态代理使用Java原生的反射API进行操作，在生成类上比较高效；CGLIB使用ASM框架直接对字节码进行操作，在类的执行过程中比较高效  锁synchronized同步代码块 使用字节码指">
@@ -429,7 +429,7 @@
                 
               
 
-              <time title="创建时间：2018-05-02 01:11:55 / 修改时间：01:12:36" itemprop="dateCreated datePublished" datetime="2018-05-02T01:11:55+08:00">2018-05-02</time>
+              <time title="创建时间：2018-05-02 01:11:55 / 修改时间：23:36:35" itemprop="dateCreated datePublished" datetime="2018-05-02T01:11:55+08:00">2018-05-02</time>
             
 
             
@@ -522,19 +522,19 @@
       
 
       
-        <h2 id="CGLIB和Java动态代理的区别"><a href="#CGLIB和Java动态代理的区别" class="headerlink" title="CGLIB和Java动态代理的区别"></a>CGLIB和Java动态代理的区别</h2><ol>
+        <h1 id="CGLIB和Java动态代理的区别"><a href="#CGLIB和Java动态代理的区别" class="headerlink" title="CGLIB和Java动态代理的区别"></a>CGLIB和Java动态代理的区别</h1><ol>
 <li>Java动态代理只能够对接口进行代理，不能对普通的类进行代理（因为所有生成的代理类的父类为Proxy，Java类继承机制不允许多重继承）；CGLIB能够代理普通类；</li>
 <li>Java动态代理使用Java原生的反射API进行操作，在生成类上比较高效；CGLIB使用ASM框架直接对字节码进行操作，在类的执行过程中比较高效</li>
 </ol>
-<h2 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h2><h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><p>同步代码块 使用字节码指令 monitorenter monitorexit(一次只能一个进入)</p>
+<h1 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h1><h2 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h2><p>同步代码块 使用字节码指令 monitorenter monitorexit(一次只能一个进入)</p>
 <p>同步方法 ACC_synchronized标志位</p>
-<h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><ol>
+<h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><ol>
 <li>保证多线程共享变量可见性</li>
 <li>禁止指令重排序</li>
 <li>不保证原子性</li>
 </ol>
 <p>直接写入主内存，不写入本地内存</p>
-<h4 id="不保证原子性"><a href="#不保证原子性" class="headerlink" title="不保证原子性"></a>不保证原子性</h4><p>在volatile变量前加上lock汇编指令</p>
+<h3 id="不保证原子性"><a href="#不保证原子性" class="headerlink" title="不保证原子性"></a>不保证原子性</h3><p>在volatile变量前加上lock汇编指令</p>
 <ol>
 <li>重排序时不能把后面的指令重排序到内存屏障之前的位置</li>
 <li>使得本CPU的Cache写入内存(相当于直接写入主内存)</li>
@@ -543,10 +543,10 @@
 <p>用处：</p>
 <ol>
 <li>多线程共享变量只读操作。根据只读变量当做标志位。</li>
-<li>防止重排序<h3 id="CAS算法"><a href="#CAS算法" class="headerlink" title="CAS算法"></a>CAS算法</h3>使用处理器指令CMPXCHG</li>
+<li>防止重排序<h2 id="CAS算法"><a href="#CAS算法" class="headerlink" title="CAS算法"></a>CAS算法</h2>使用处理器指令CMPXCHG</li>
 </ol>
 <p>自旋CAS：不断地获取，直到成功</p>
-<h3 id="线程通讯"><a href="#线程通讯" class="headerlink" title="线程通讯"></a>线程通讯</h3><ol>
+<h2 id="线程通讯"><a href="#线程通讯" class="headerlink" title="线程通讯"></a>线程通讯</h2><ol>
 <li>wait,notify这类方法是定义在Object上的。</li>
 <li>调用wait或者notify时必须首先通过synchronized关键字获取到对象的锁。</li>
 <li>调用wait方法时会释放锁。调用notify时不会释放锁，代码走完才会释放锁。</li>
@@ -559,46 +559,46 @@
 <li>一个对象拥有一个等待队列和同步队列</li>
 <li>synchronized锁的对象一致才会互斥。</li>
 </ol>
-<h3 id="Lock和AQS"><a href="#Lock和AQS" class="headerlink" title="Lock和AQS"></a>Lock和AQS</h3><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/58571706.jpg" alt=""></p>
-<h4 id="独占锁流程"><a href="#独占锁流程" class="headerlink" title="独占锁流程"></a>独占锁流程</h4><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/7892250.jpg" alt=""></p>
-<h4 id="共享锁流程"><a href="#共享锁流程" class="headerlink" title="共享锁流程"></a>共享锁流程</h4><ol>
+<h2 id="Lock和AQS"><a href="#Lock和AQS" class="headerlink" title="Lock和AQS"></a>Lock和AQS</h2><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/58571706.jpg" alt=""></p>
+<h3 id="独占锁流程"><a href="#独占锁流程" class="headerlink" title="独占锁流程"></a>独占锁流程</h3><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/7892250.jpg" alt=""></p>
+<h3 id="共享锁流程"><a href="#共享锁流程" class="headerlink" title="共享锁流程"></a>共享锁流程</h3><ol>
 <li>入队列：线程获取锁失败后，创建一个节点，并将节点添加到等待队列尾，然后将线程阻塞，等待唤醒；</li>
 <li>唤醒：另一个线程释放锁，取队列的第一个节点，将节点对应线程唤醒；</li>
 <li>出队列：唤醒后的线程将尝试获取锁，成功后将自己移出队列，同时判断是否任然存在空闲的锁，如果存在则继续唤醒下一个节点。</li>
 <li>每次只会唤醒第一个节点，如果同时释放多个锁，后续的节点将由前面被唤醒的节点来唤醒，尽量减少数据竞争。</li>
 </ol>
-<h3 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h3><p>独占的可重入锁</p>
+<h2 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h2><p>独占的可重入锁</p>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> <span class="function"><span class="keyword">boolean</span> <span class="title">nonfairTryAcquire</span><span class="params">(<span class="keyword">int</span> acquires)</span> </span>&#123;</div><div class="line">  <span class="keyword">final</span> Thread current = Thread.currentThread();</div><div class="line">  <span class="keyword">int</span> c = getState();</div><div class="line">  <span class="keyword">if</span> (c == <span class="number">0</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (compareAndSetState(<span class="number">0</span>, acquires)) &#123;</div><div class="line">      setExclusiveOwnerThread(current);</div><div class="line">      <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">//说白了，就是在这里！判断下获取锁的线程是否为当前线程，如果是，直接让state+1</span></div><div class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (current == getExclusiveOwnerThread()) &#123;</div><div class="line">    <span class="keyword">int</span> nextc = c + acquires;</div><div class="line">    <span class="keyword">if</span> (nextc &lt; <span class="number">0</span>) <span class="comment">// overflow</span></div><div class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"Maximum lock count exceeded"</span>);</div><div class="line">      setState(nextc);</div><div class="line">      <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>当头结点刚释放锁时候，假如这时候有一个线程调用的lock方法想要获取锁，那么他相对于队列中的线程就是不公平的</p>
-<h3 id="ReentrantReadWriteLock"><a href="#ReentrantReadWriteLock" class="headerlink" title="ReentrantReadWriteLock"></a>ReentrantReadWriteLock</h3><ol>
+<h2 id="ReentrantReadWriteLock"><a href="#ReentrantReadWriteLock" class="headerlink" title="ReentrantReadWriteLock"></a>ReentrantReadWriteLock</h2><ol>
 <li>内部维护了两个Lock，一个ReadLock，一个WriteLock。</li>
 <li>读锁是一个可重入的共享锁。写锁是一个可重入的独占锁。</li>
 <li>内部维护时讲state变量分为高16位和低16位来操作。</li>
 <li>读锁与写锁相互排斥 。比如在获取读锁时如果已经有写锁了，阻塞。反之亦然。</li>
 </ol>
-<h3 id="LockSupport"><a href="#LockSupport" class="headerlink" title="LockSupport"></a>LockSupport</h3><p>阻塞线程使用LockSupport工具类实现</p>
+<h2 id="LockSupport"><a href="#LockSupport" class="headerlink" title="LockSupport"></a>LockSupport</h2><p>阻塞线程使用LockSupport工具类实现</p>
 <p>monitorenter指令加上去之后线程切换上去之后发现没有进入又直接切换走。而LockSupport的park方法则是将线程休息，此时线程处于WAITING状态。CPU是不会切换上去的。这就大大减少了线程的上下文切换。</p>
-<h2 id="Condition线程通讯"><a href="#Condition线程通讯" class="headerlink" title="Condition线程通讯"></a>Condition线程通讯</h2><p>Condition底层的线程等待也是使用的LockSupport的park方法。它对interrupt方法不敏感，而wait方法遇到interrupt就抛异常</p>
+<h1 id="Condition线程通讯"><a href="#Condition线程通讯" class="headerlink" title="Condition线程通讯"></a>Condition线程通讯</h1><p>Condition底层的线程等待也是使用的LockSupport的park方法。它对interrupt方法不敏感，而wait方法遇到interrupt就抛异常</p>
 <p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/11437042.jpg" alt=""></p>
 <p>await方法，其实就是先释放锁(说白了底层就是更改了AQS的state),然后调用LockSupport的park方法park自己，再把自己丢进Condition的等待队列中。这里不要忘记了，释放锁的同时还通知了同步队列中的线程去拿锁哦。</p>
 <p>signal方法其实就是将Condition等待队列中的线程移动到同步队列。至于它拿不拿的到锁，还是另外一回事。</p>
-<h3 id="Condition底层模型"><a href="#Condition底层模型" class="headerlink" title="Condition底层模型"></a>Condition底层模型</h3><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/12960615.jpg" alt=""></p>
+<h2 id="Condition底层模型"><a href="#Condition底层模型" class="headerlink" title="Condition底层模型"></a>Condition底层模型</h2><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/12960615.jpg" alt=""></p>
 <p>调用await()<br><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/71246092.jpg" alt=""></p>
 <p>调用signal()</p>
 <p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/55279777.jpg" alt=""></p>
-<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h4 id="底层"><a href="#底层" class="headerlink" title="底层"></a>底层</h4><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/57832256.jpg" alt=""></p>
+<h1 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h1><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><h3 id="底层"><a href="#底层" class="headerlink" title="底层"></a>底层</h3><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/57832256.jpg" alt=""></p>
 <p>为什么HashMap在扩容时数组的长度必须是2的倍数(默认16)，其实这和indexFor()这个方法有关系的，这个方法是根据key的hash值算出在数组对应的索引</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexFor</span><span class="params">(<span class="keyword">int</span> h, <span class="keyword">int</span> length)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> h &amp; (length<span class="number">-1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>h &amp; (length-1)要和h%length的效果一样就必须保证length的长度是2的倍数</p>
-<h4 id="扩容相关-容量，负载因子，2的倍数"><a href="#扩容相关-容量，负载因子，2的倍数" class="headerlink" title="扩容相关(容量，负载因子，2的倍数)"></a>扩容相关(容量，负载因子，2的倍数)</h4><p>数组的默认长度是16</p>
+<h3 id="扩容相关-容量，负载因子，2的倍数"><a href="#扩容相关-容量，负载因子，2的倍数" class="headerlink" title="扩容相关(容量，负载因子，2的倍数)"></a>扩容相关(容量，负载因子，2的倍数)</h3><p>数组的默认长度是16</p>
 <p>原数组中的数据必须重新计算其在新数组中的位置，并放进去，这就是 resize</p>
 <p>HashMap 中的元素个数超过(数组大小 *XloadFactor)时，就会进行数组扩容，loadFactor的默认值为 0.75，这是一个折中的取值</p>
-<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><h4 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h4><p>每当向数组中添加元素时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容，以满足添加数据的需求。数组扩容有两个方法，其中开发者可以通过一个 public 的方法ensureCapacity(int minCapacity)来增加 ArrayList 的容量，而在存储元素等操作过程中，如果遇到容量不足，会调用priavte方法private void ensureCapacityInternal(int minCapacity)实现。</p>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><h3 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h3><p>每当向数组中添加元素时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容，以满足添加数据的需求。数组扩容有两个方法，其中开发者可以通过一个 public 的方法ensureCapacity(int minCapacity)来增加 ArrayList 的容量，而在存储元素等操作过程中，如果遇到容量不足，会调用priavte方法private void ensureCapacityInternal(int minCapacity)实现。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int newCapacity = oldCapacity + (oldCapacity <span class="meta">&gt;&gt; </span><span class="number">1</span>)</div></pre></td></tr></table></figure>
 <p>1.5倍</p>
 <p>Arrays.copyOf方法:</p>
 <p>根据newLength创建了一个数组，然后调用System.arraycopy把数据拷贝了过去。这个System.arraycopy又是个native方法，据说速度很快</p>
-<h3 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h3><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/20882052.jpg" alt=""></p>
+<h2 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h2><p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/20882052.jpg" alt=""></p>
 <p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/49640930.jpg" alt=""></p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Map</span> <span class="meta">map</span> = new HashMap()<span class="comment">;</span></div><div class="line">    <span class="keyword">Iterator </span><span class="keyword">iter </span>= <span class="meta">map</span>.entrySet().<span class="keyword">iterator();</span></div><div class="line"><span class="keyword"> </span>   <span class="meta">while</span> (<span class="keyword">iter.hasNext()) </span>&#123;</div><div class="line">        <span class="meta">Map</span>.Entry <span class="meta">entry</span> = (<span class="meta">Map</span>.Entry) <span class="keyword">iter.next();</span></div><div class="line"><span class="keyword"> </span>       Object key = <span class="meta">entry</span>.getKey()<span class="comment">;</span></div><div class="line">        Object val = <span class="meta">entry</span>.getValue()<span class="comment">;</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Map <span class="built_in">map</span> = <span class="keyword">new</span> <span class="keyword">HashMap</span>();</div><div class="line">Iterator iter = <span class="built_in">map</span>.keySet().iterator();</div><div class="line">    <span class="keyword">while</span> (iter.hasNext()) &#123;</div><div class="line">    <span class="keyword">Object</span> <span class="built_in">key</span> = iter.next();</div><div class="line">    <span class="keyword">Object</span> val = <span class="built_in">map</span>.<span class="built_in">get</span>(<span class="built_in">key</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -606,16 +606,16 @@
 <p>在使用Iterable遍历Collection时，当Collection内部的元素为对象类型时，.next返回的是指针。也就是说是浅拷贝。</p>
 <p>集合与集合之间的转换<br>Map–》Collection：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Map</span><span class="selector-class">.keySet</span>(),<span class="selector-tag">entrySet</span>(),<span class="selector-class">.values</span>().三个<span class="selector-tag">API</span></div></pre></td></tr></table></figure></p>
 <p>List《—》Set《—》Queue:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//<span class="keyword">Set</span><span class="comment">--》List</span></div><div class="line"><span class="keyword">List</span>&lt;<span class="keyword">String</span>&gt; list3 = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">String</span>&gt;(<span class="keyword">new</span> HashSet&lt;<span class="keyword">String</span>&gt;());</div><div class="line">//List<span class="comment">--》Set</span></div><div class="line"><span class="keyword">Set</span>&lt;<span class="keyword">String</span>&gt; <span class="keyword">set</span> = <span class="keyword">new</span> HashSet&lt;<span class="keyword">String</span>&gt;(<span class="keyword">new</span> ArrayList&lt;<span class="keyword">String</span>&gt;());</div></pre></td></tr></table></figure></p>
-<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>双向链表</p>
+<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><p>双向链表</p>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> add(<span class="keyword">int</span> <span class="keyword">index</span>, E element) &#123;</div><div class="line">    checkPositionIndex(<span class="keyword">index</span>);</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">index</span> == size)</div><div class="line">        <span class="comment">//链表尾部添加element</span></div><div class="line">        linkLast(element);</div><div class="line">    <span class="keyword">else</span></div><div class="line">        在某个元素前面添加element</div><div class="line">        linkBefore(element, node(<span class="keyword">index</span>));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> E get(<span class="keyword">int</span> <span class="keyword">index</span>) &#123;</div><div class="line">    checkElementIndex(<span class="keyword">index</span>);</div><div class="line">    <span class="keyword">return</span> node(<span class="keyword">index</span>).item;</div><div class="line">&#125;</div><div class="line"></div><div class="line">    Node&lt;E&gt; node(<span class="keyword">int</span> <span class="keyword">index</span>) &#123;</div><div class="line">    <span class="comment">// assert isElementIndex(index);</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> (<span class="keyword">index</span> &lt; (size &gt;&gt; <span class="number">1</span>)) &#123;</div><div class="line">        Node&lt;E&gt; x = first;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">index</span>; i++)</div><div class="line">            x = x.next;</div><div class="line">        <span class="keyword">return</span> x;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        Node&lt;E&gt; x = last;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = size - <span class="number">1</span>; i &gt; <span class="keyword">index</span>; i--)</div><div class="line">            x = x.prev;</div><div class="line">        <span class="keyword">return</span> x;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>根据索引拿到Node后，其他的就是链表的基本操作了，新增和删除的时候其实都只会影响某个Node的前后节点，挪一挪指针就OK了。</p>
-<h3 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h3><p>在使用上，LinkedHashMap和HashMap的区别就是LinkedHashMap是有序的</p>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>LinkedHashMap继承自HashMap,它的新增(put)和获取(get)方法都是复用父类的HashMap的代码，只是自己重写了put给get内部的某些接口来搞事情，这个特性在C++中叫钩子技术，在Java里面大家喜欢叫多态，其实多态这个词并不能很好的形容这种现象。</p>
+<h2 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h2><p>在使用上，LinkedHashMap和HashMap的区别就是LinkedHashMap是有序的</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>LinkedHashMap继承自HashMap,它的新增(put)和获取(get)方法都是复用父类的HashMap的代码，只是自己重写了put给get内部的某些接口来搞事情，这个特性在C++中叫钩子技术，在Java里面大家喜欢叫多态，其实多态这个词并不能很好的形容这种现象。</p>
 <p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/35826754.jpg" alt=""></p>
 <p><img src="http://p1k0tu9ph.bkt.clouddn.com/18-3-7/1366019.jpg" alt=""></p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> static <span class="class"><span class="keyword">class</span> <span class="title">Entry&lt;K</span>,<span class="title">V&gt;</span> <span class="keyword">extends</span> <span class="title">HashMap</span>.<span class="title">Entry&lt;K</span>,<span class="title">V&gt;</span> </span>&#123;</div><div class="line">    <span class="comment">// These fields comprise the doubly linked list used for iteration.</span></div><div class="line">    <span class="type">Entry</span>&lt;<span class="type">K</span>,<span class="type">V</span>&gt; before, after;</div><div class="line"></div><div class="line"><span class="type">Entry</span>(int hash, <span class="type">K</span> key, <span class="type">V</span> value, <span class="type">HashMap</span>.<span class="type">Entry</span>&lt;<span class="type">K</span>,<span class="type">V</span>&gt; next) &#123;</div><div class="line">        <span class="keyword">super</span>(hash, key, value, next);</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>前面四个，是从HashMap.Entry中继承过来的；后面两个，是是LinkedHashMap独有的。不要搞错了next和before、After，next是用于维护HashMap指定table位置上连接的Entry的顺序的，before、After是用于维护Entry插入的先后顺序的(为了维护双向链表)。</p>
-<h4 id="利用LinkedHashMap实现LRU缓存"><a href="#利用LinkedHashMap实现LRU缓存" class="headerlink" title="利用LinkedHashMap实现LRU缓存"></a>利用LinkedHashMap实现LRU缓存</h4>
+<h3 id="利用LinkedHashMap实现LRU缓存"><a href="#利用LinkedHashMap实现LRU缓存" class="headerlink" title="利用LinkedHashMap实现LRU缓存"></a>利用LinkedHashMap实现LRU缓存</h3>
       
     </div>
 
@@ -691,8 +691,6 @@
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
             <a href="/tags/知识点/" rel="tag"><i class="fa fa-tag"></i> 知识点</a>
-          
-            <a href="/tags/学习记录/" rel="tag"><i class="fa fa-tag"></i> 学习记录</a>
           
         </div>
       
@@ -885,9 +883,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -948,7 +944,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CGLIB和Java动态代理的区别"><span class="nav-number">1.</span> <span class="nav-text">CGLIB和Java动态代理的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁"><span class="nav-number">2.</span> <span class="nav-text">锁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized"><span class="nav-number">2.1.</span> <span class="nav-text">synchronized</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#volatile"><span class="nav-number">2.2.</span> <span class="nav-text">volatile</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不保证原子性"><span class="nav-number">2.2.1.</span> <span class="nav-text">不保证原子性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS算法"><span class="nav-number">2.3.</span> <span class="nav-text">CAS算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程通讯"><span class="nav-number">2.4.</span> <span class="nav-text">线程通讯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lock和AQS"><span class="nav-number">2.5.</span> <span class="nav-text">Lock和AQS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#独占锁流程"><span class="nav-number">2.5.1.</span> <span class="nav-text">独占锁流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享锁流程"><span class="nav-number">2.5.2.</span> <span class="nav-text">共享锁流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantLock"><span class="nav-number">2.6.</span> <span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReentrantReadWriteLock"><span class="nav-number">2.7.</span> <span class="nav-text">ReentrantReadWriteLock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LockSupport"><span class="nav-number">2.8.</span> <span class="nav-text">LockSupport</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition线程通讯"><span class="nav-number">3.</span> <span class="nav-text">Condition线程通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Condition底层模型"><span class="nav-number">3.1.</span> <span class="nav-text">Condition底层模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器"><span class="nav-number">4.</span> <span class="nav-text">容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-number">4.1.</span> <span class="nav-text">HashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#底层"><span class="nav-number">4.1.1.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩容相关-容量，负载因子，2的倍数"><span class="nav-number">4.1.2.</span> <span class="nav-text">扩容相关(容量，负载因子，2的倍数)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">4.2.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩容"><span class="nav-number">4.2.1.</span> <span class="nav-text">扩容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承关系"><span class="nav-number">4.3.</span> <span class="nav-text">继承关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-number">4.4.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedHashMap"><span class="nav-number">4.5.</span> <span class="nav-text">LinkedHashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">4.5.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用LinkedHashMap实现LRU缓存"><span class="nav-number">4.5.2.</span> <span class="nav-text">利用LinkedHashMap实现LRU缓存</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CGLIB和Java动态代理的区别"><span class="nav-number">1.</span> <span class="nav-text">CGLIB和Java动态代理的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#锁"><span class="nav-number">2.</span> <span class="nav-text">锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized"><span class="nav-number">2.1.</span> <span class="nav-text">synchronized</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile"><span class="nav-number">2.2.</span> <span class="nav-text">volatile</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不保证原子性"><span class="nav-number">2.2.1.</span> <span class="nav-text">不保证原子性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAS算法"><span class="nav-number">2.3.</span> <span class="nav-text">CAS算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程通讯"><span class="nav-number">2.4.</span> <span class="nav-text">线程通讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock和AQS"><span class="nav-number">2.5.</span> <span class="nav-text">Lock和AQS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#独占锁流程"><span class="nav-number">2.5.1.</span> <span class="nav-text">独占锁流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#共享锁流程"><span class="nav-number">2.5.2.</span> <span class="nav-text">共享锁流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReentrantLock"><span class="nav-number">2.6.</span> <span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReentrantReadWriteLock"><span class="nav-number">2.7.</span> <span class="nav-text">ReentrantReadWriteLock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LockSupport"><span class="nav-number">2.8.</span> <span class="nav-text">LockSupport</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Condition线程通讯"><span class="nav-number">3.</span> <span class="nav-text">Condition线程通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition底层模型"><span class="nav-number">3.1.</span> <span class="nav-text">Condition底层模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#容器"><span class="nav-number">4.</span> <span class="nav-text">容器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap"><span class="nav-number">4.1.</span> <span class="nav-text">HashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#底层"><span class="nav-number">4.1.1.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩容相关-容量，负载因子，2的倍数"><span class="nav-number">4.1.2.</span> <span class="nav-text">扩容相关(容量，负载因子，2的倍数)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">4.2.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#扩容"><span class="nav-number">4.2.1.</span> <span class="nav-text">扩容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承关系"><span class="nav-number">4.3.</span> <span class="nav-text">继承关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedList"><span class="nav-number">4.4.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedHashMap"><span class="nav-number">4.5.</span> <span class="nav-text">LinkedHashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">4.5.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用LinkedHashMap实现LRU缓存"><span class="nav-number">4.5.2.</span> <span class="nav-text">利用LinkedHashMap实现LRU缓存</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
