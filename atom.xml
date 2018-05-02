@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyu.space/"/>
-  <updated>2018-05-02T07:53:54.387Z</updated>
+  <updated>2018-05-02T08:24:44.776Z</updated>
   <id>http://wyu.space/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux文件压缩与打包</title>
+    <link href="http://wyu.space/2018/05/02/Linux%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E4%B8%8E%E6%89%93%E5%8C%85/"/>
+    <id>http://wyu.space/2018/05/02/Linux文件压缩与打包/</id>
+    <published>2018-05-02T07:57:49.000Z</published>
+    <updated>2018-05-02T08:24:44.776Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="文件压缩"><a href="#文件压缩" class="headerlink" title="文件压缩"></a>文件压缩</h1><h2 id="压缩比"><a href="#压缩比" class="headerlink" title="压缩比"></a>压缩比</h2><p>压缩前与压缩后文件所占用的磁盘空间大小的比。</p>
+<h2 id="常用压缩命令与技术"><a href="#常用压缩命令与技术" class="headerlink" title="常用压缩命令与技术"></a>常用压缩命令与技术</h2><h3 id="Compress"><a href="#Compress" class="headerlink" title="Compress"></a>Compress</h3><p>已经过时</p>
+<h3 id="gzip-zcat"><a href="#gzip-zcat" class="headerlink" title="gzip,zcat"></a>gzip,zcat</h3><h4 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h4><p>*.gz</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ol>
+<li>gzip</li>
+<li>zcat：如果压缩的是文件，可以使用该命令读取<h3 id="bzip2-bzcat"><a href="#bzip2-bzcat" class="headerlink" title="bzip2,bzcat"></a>bzip2,bzcat</h3>压缩比优于gzip<h4 id="文件格式-1"><a href="#文件格式-1" class="headerlink" title="文件格式"></a>文件格式</h4><em>.bz,</em>.bz2,<em>.tbz,</em>.tbz2<h4 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h4></li>
+<li>bzip2</li>
+<li>bzcat：如果压缩的是文件，可以使用该命令读取<h3 id="tar：打包"><a href="#tar：打包" class="headerlink" title="tar：打包"></a>tar：打包</h3>通过gzip/bzip2同时进行压缩<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4></li>
+<li>-z, –gzip, –gunzip, –ungzip：通过 gzip 过滤归档</li>
+<li>-x：解打包或解压缩</li>
+<li>-v, –verbose  详细地列出处理的文件</li>
+<li>-f：文件名称</li>
+<li>-j, –bzip2 通过 bzip2 过滤归档</li>
+<li>-p：保存文件原本的权限与属性</li>
+<li>-c：新建打包文件</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;文件压缩&quot;&gt;&lt;a href=&quot;#文件压缩&quot; class=&quot;headerlink&quot; title=&quot;文件压缩&quot;&gt;&lt;/a&gt;文件压缩&lt;/h1&gt;&lt;h2 id=&quot;压缩比&quot;&gt;&lt;a href=&quot;#压缩比&quot; class=&quot;headerlink&quot; title=&quot;压缩比&quot;&gt;&lt;/a&gt;压缩
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://wyu.space/categories/Linux/"/>
+    
+    
+      <category term="学习记录" scheme="http://wyu.space/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="Linux" scheme="http://wyu.space/tags/Linux/"/>
+    
+      <category term="文件压缩" scheme="http://wyu.space/tags/%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux基本操作</title>
@@ -46,9 +88,9 @@
       <category term="Linux" scheme="http://wyu.space/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://wyu.space/tags/Linux/"/>
-    
       <category term="学习记录" scheme="http://wyu.space/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="Linux" scheme="http://wyu.space/tags/Linux/"/>
     
       <category term="基本操作" scheme="http://wyu.space/tags/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     
