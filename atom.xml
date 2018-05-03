@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyu.space/"/>
-  <updated>2018-05-03T07:27:05.141Z</updated>
+  <updated>2018-05-03T07:29:22.771Z</updated>
   <id>http://wyu.space/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wyu.space/2018/05/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://wyu.space/2018/05/03/正则表达式/</id>
     <published>2018-05-03T06:53:36.000Z</published>
-    <updated>2018-05-03T07:27:05.141Z</updated>
+    <updated>2018-05-03T07:29:22.771Z</updated>
     
     <content type="html"><![CDATA[<h1 id="什么是正则表达式？"><a href="#什么是正则表达式？" class="headerlink" title="什么是正则表达式？"></a>什么是正则表达式？</h1><p>正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p>
 <h1 id="语系的影响"><a href="#语系的影响" class="headerlink" title="语系的影响"></a>语系的影响</h1><p>不同语系的字符顺序不同，使用范围选取会得到不同的结果。</p>
