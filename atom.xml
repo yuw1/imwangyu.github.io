@@ -445,11 +445,11 @@
       <category term="解决方法" scheme="http://wyu.space/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     
     
-      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
-    
       <category term="Axis2" scheme="http://wyu.space/tags/Axis2/"/>
     
       <category term="SOAPAction" scheme="http://wyu.space/tags/SOAPAction/"/>
+    
+      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
     
       <category term=".NET" scheme="http://wyu.space/tags/NET/"/>
     
