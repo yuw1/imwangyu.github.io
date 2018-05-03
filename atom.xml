@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyu.space/"/>
-  <updated>2018-05-03T07:25:06.952Z</updated>
+  <updated>2018-05-03T07:27:05.141Z</updated>
   <id>http://wyu.space/</id>
   
   <author>
@@ -20,12 +20,11 @@
     <link href="http://wyu.space/2018/05/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://wyu.space/2018/05/03/正则表达式/</id>
     <published>2018-05-03T06:53:36.000Z</published>
-    <updated>2018-05-03T07:25:06.952Z</updated>
+    <updated>2018-05-03T07:27:05.141Z</updated>
     
     <content type="html"><![CDATA[<h1 id="什么是正则表达式？"><a href="#什么是正则表达式？" class="headerlink" title="什么是正则表达式？"></a>什么是正则表达式？</h1><p>正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p>
-<p>#语系的影响<br>不同语系的字符顺序不同，使用范围选取会得到不同的结果。</p>
-<p>#基础正则表达式</p>
-<h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><table><br><tr><br>    <th>特殊符号</th><br>    <th>代表意义</th><br></tr><br><tr><br>    <td>[:alnum:]</td><br>    <td>英文大小写字符及数字</td><br></tr><br><tr><br>    <td>[:alpha:]</td><br>    <td>任何英文大小写字符</td><br></tr><br><tr><br>    <td>[:upper:]</td><br>    <td>大写字符</td><br></tr><br><tr><br>    <td>[:lower:]</td><br>    <td>小写字符</td><br></tr><br><tr><br>    <td>[:digit:]</td><br>    <td>数字</td><br></tr><br></table>
+<h1 id="语系的影响"><a href="#语系的影响" class="headerlink" title="语系的影响"></a>语系的影响</h1><p>不同语系的字符顺序不同，使用范围选取会得到不同的结果。</p>
+<h1 id="基础正则表达式"><a href="#基础正则表达式" class="headerlink" title="基础正则表达式"></a>基础正则表达式</h1><h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><table><br><tr><br>    <th>特殊符号</th><br>    <th>代表意义</th><br></tr><br><tr><br>    <td>[:alnum:]</td><br>    <td>英文大小写字符及数字</td><br></tr><br><tr><br>    <td>[:alpha:]</td><br>    <td>任何英文大小写字符</td><br></tr><br><tr><br>    <td>[:upper:]</td><br>    <td>大写字符</td><br></tr><br><tr><br>    <td>[:lower:]</td><br>    <td>小写字符</td><br></tr><br><tr><br>    <td>[:digit:]</td><br>    <td>数字</td><br></tr><br></table>
 
 <h2 id="中括号"><a href="#中括号" class="headerlink" title="中括号"></a>中括号</h2><p>中括号中不管有几个字符，只代表一个字符。</p>
 <h2 id="caret"><a href="#caret" class="headerlink" title="caret"></a>caret</h2><ol>
@@ -485,11 +484,11 @@
       <category term="解决方法" scheme="http://wyu.space/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     
     
+      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
+    
       <category term="Axis2" scheme="http://wyu.space/tags/Axis2/"/>
     
       <category term="SOAPAction" scheme="http://wyu.space/tags/SOAPAction/"/>
-    
-      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
     
       <category term=".NET" scheme="http://wyu.space/tags/NET/"/>
     
