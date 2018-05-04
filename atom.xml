@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyu.space/"/>
-  <updated>2018-05-03T07:44:47.178Z</updated>
+  <updated>2018-05-03T13:50:04.848Z</updated>
   <id>http://wyu.space/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java虚拟机垃圾收集器</title>
+    <link href="http://wyu.space/2018/05/03/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/"/>
+    <id>http://wyu.space/2018/05/03/Java虚拟机垃圾收集器/</id>
+    <published>2018-05-03T10:36:06.000Z</published>
+    <updated>2018-05-03T13:50:04.848Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Serial收集器"><a href="#Serial收集器" class="headerlink" title="Serial收集器"></a>Serial收集器</h1><h1 id="ParNew收集器"><a href="#ParNew收集器" class="headerlink" title="ParNew收集器"></a>ParNew收集器</h1><h1 id="Parallel-Scavenge收集器"><a href="#Parallel-Scavenge收集器" class="headerlink" title="Parallel Scavenge收集器"></a>Parallel Scavenge收集器</h1><h1 id="Serial-Old收集器"><a href="#Serial-Old收集器" class="headerlink" title="Serial Old收集器"></a>Serial Old收集器</h1><h1 id="Parallel-Old收集器"><a href="#Parallel-Old收集器" class="headerlink" title="Parallel Old收集器"></a>Parallel Old收集器</h1><h1 id="CMS收集器"><a href="#CMS收集器" class="headerlink" title="CMS收集器"></a>CMS收集器</h1><h1 id="G1收集器"><a href="#G1收集器" class="headerlink" title="G1收集器"></a>G1收集器</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Serial收集器&quot;&gt;&lt;a href=&quot;#Serial收集器&quot; class=&quot;headerlink&quot; title=&quot;Serial收集器&quot;&gt;&lt;/a&gt;Serial收集器&lt;/h1&gt;&lt;h1 id=&quot;ParNew收集器&quot;&gt;&lt;a href=&quot;#ParNew收集器&quot; class
+    
+    </summary>
+    
+      <category term="Java" scheme="http://wyu.space/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://wyu.space/tags/Java/"/>
+    
+      <category term="垃圾回收" scheme="http://wyu.space/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>正则表达式使用规则</title>
